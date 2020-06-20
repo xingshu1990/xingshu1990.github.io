@@ -124,6 +124,18 @@
       </tags>
   </entry>
   <entry>
+    <title>树莓派安装v2ray</title>
+    <url>/other/raspberry_v2ray.html</url>
+    <content><![CDATA[<h3 id="需求介绍"><a href="#需求介绍" class="headerlink" title="需求介绍"></a>需求介绍</h3>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>v2ray</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用python生成带有背景图的文字图</title>
     <url>/python/py_image.html</url>
     <content><![CDATA[<blockquote>
