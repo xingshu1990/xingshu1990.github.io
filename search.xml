@@ -164,4 +164,45 @@
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Sublime Text3通过SFTP远程连接树莓派</title>
+    <url>/other/raspberry_SFTP.html</url>
+    <content><![CDATA[<h3 id="需求重现"><a href="#需求重现" class="headerlink" title="需求重现"></a>需求重现</h3><p>电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，<br>或者一些主板稀奇古怪的原因，导致不能安装W7及以上的系统，另外部分Python库只有linux下能安装运行。</p>
+<p>于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。</p>
+<p>问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？<br>答：对于我来说，确实不香。主要原因是nano的复制粘贴不方便，也没有代码补全，vim需要一定的学习成本，还不如直接一点，用安装好插件的sublime text3，编辑py代码，更改sftp的sftp-config.json文件，自动保存上传，然后再切换到xshell 进行远程调试。</p>
+<p>问题2：为什么不用vscode、pychram远程连接？<br>答:vscode确实很好用，但是XP安装不起来（没办法，非程序员，只是传统行业中的销售人员，偶尔摸鱼看点Python编程）。pycharm对于系统配置要求比较高，安装旧版本的pycharm，也是比较卡，于是就优先考虑pycharm。</p>
+<h3 id="实行问题"><a href="#实行问题" class="headerlink" title="实行问题"></a>实行问题</h3><p>我买的树莓派是3B+，通过下载<a href="https://packagecontrol.io/installation#st3" target="_blank" rel="noopener">https://packagecontrol.io/installation#st3</a> 中的Package Control文件，安装或解压后使用，这个网络上文章比较多，今天就暂时不写了，以后可能补充。</p>
+<p>安装好，并通过Package Control安装了SFTP以后，在本地新建一个文件夹，用来保存和上传文件使用。<br>通过sublime text3打开文件夹，sublime text3默认有一个侧边栏，点开上面新建的文件夹，右键点击sftp/ftp 会有一个Map to Remote ，sftp会默认在当前目录下新建：sftp-config.json这个文件。</p>
+<pre><code>&quot;type&quot;: &quot;sftp&quot;,  //SSH连接选sftp
+//下面这些配置参考网络上的文章
+
+&quot;save_before_upload&quot;: true,
+&quot;upload_on_save&quot;: true,
+&quot;sync_down_on_open&quot;: false,
+&quot;sync_skip_deletes&quot;: false,
+&quot;sync_same_age&quot;: true,
+&quot;confirm_downloads&quot;: false,
+&quot;confirm_sync&quot;: true,
+&quot;confirm_overwrite_newer&quot;: false,
+
+&quot;host&quot;: &quot;192.168.1.*&quot;,  //树莓派wifi IP或者有线IP
+&quot;user&quot;: &quot;pi&quot;,           //默认账户是pi
+&quot;password&quot;: &quot;*&quot;,        //密码  
+&quot;port&quot;: &quot;22&quot;,           //端口不改
+
+&quot;remote_path&quot;: &quot;/home/pi&quot;,   //这个是重点，使用的是xshell连接到树莓派以后 树莓派提供的目录。
+//我原先设定这个目录为/opt/自建子目录/ 结果死也连接不上。
+
+
+未完待续……</code></pre>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>Sublime Text3</tag>
+        <tag>SFTP</tag>
+        <tag>远程连接</tag>
+      </tags>
+  </entry>
 </search>
