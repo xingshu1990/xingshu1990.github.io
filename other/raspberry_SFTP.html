@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="树莓派,Sublime Text3,SFTP,远程连接," />
+  <meta name="keywords" content="pycoding,Python,爬虫,自然语言,推荐" />
 
 
 
@@ -83,19 +83,20 @@
 
 
 
-<meta name="description" content="需求重现电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，或者一些主板稀奇古怪的原因，导致不能安装W7及以上的系统，另外部分Python库只有linux下能安装运行。 于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。 问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？答：对于我来说，确实">
+<meta name="description" content="需求重现电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，或者一些主板稀奇古怪的原因，导致不能安装W7及以上�}}��统，另外部分Python库只有linux下能安装运行。 于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。 问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？答：对于我来说">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text3通过SFTP远程连接树莓派">
 <meta property="og:url" content="https://xingshu1990.github.io/other/raspberry_SFTP.html">
 <meta property="og:site_name" content="pycoding">
-<meta property="og:description" content="需求重现电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，或者一些主板稀奇古怪的原因，导致不能安装W7及以上的系统，另外部分Python库只有linux下能安装运行。 于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。 问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？答：对于我来说，确实">
+<meta property="og:description" content="需求重现电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，或者一些主板稀奇古怪的原因，导致不能安装W7及以上�}}��统，另外部分Python库只有linux下能安装运行。 于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。 问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？答：对于我来说">
 <meta property="article:published_time" content="2020-06-20T08:34:42.000Z">
 <meta property="article:modified_time" content="2020-06-20T09:25:18.000Z">
 <meta property="article:author" content="pycoding">
-<meta property="article:tag" content="树莓派">
-<meta property="article:tag" content="Sublime Text3">
-<meta property="article:tag" content="SFTP">
-<meta property="article:tag" content="远程连接">
+<meta property="article:tag" content="pycoding">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="自然语言">
+<meta property="article:tag" content="推荐">
 <meta name="twitter:card" content="summary">
 
 
@@ -392,7 +393,7 @@
       
 
       
-        <h3 id="需求重现"><a href="#需求重现" class="headerlink" title="需求重现"></a>需求重现</h3><p>电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，<br>或者一些主板稀奇古怪的原因，导致不能安装W7及以上的系统，另外部分Python库只有linux下能安装运行。</p>
+        <h3 id="需求重现"><a href="#需求重现" class="headerlink" title="需求重现"></a>需求重现</h3><p>电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，<br>或者一些主板稀奇古怪的原因，导致不能安装W7及以上�}}��统，另外部分Python库只有linux下能安装运行。</p>
 <p>于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。</p>
 <p>问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？<br>答：对于我来说，确实不香。主要原因是nano的复制粘贴不方便，也没有代码补全，vim需要一定的学习成本，还不如直接一点，用安装好插件的sublime text3，编辑py代码，更改sftp的sftp-config.json文件，自动保存上传，然后再切换到xshell 进行远程调试。</p>
 <p>问题2：为什么不用vscode、pychram远程连接？<br>答:vscode确实很好用，但是XP安装不起来（没办法，非程序员，只是传统行业中的销售人员，偶尔摸鱼看点Python编程）。pycharm对于系统配置要求比较高，安装旧版本的pycharm，也是比较卡，于是就优先考虑pycharm。</p>
@@ -434,18 +435,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag"># 树莓派</a>
-          
-            <a href="/tags/Sublime-Text3/" rel="tag"># Sublime Text3</a>
-          
-            <a href="/tags/SFTP/" rel="tag"># SFTP</a>
-          
-            <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" rel="tag"># 远程连接</a>
-          
-        </div>
-      
 
       
       
@@ -464,6 +453,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/other/raspberry_hexo.html" rel="prev" title="树莓派安装hexo_将树莓派当成移动博客编辑器">
+                树莓派安装hexo_将树莓派当成移动博客编辑器 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -561,15 +554,6 @@
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
