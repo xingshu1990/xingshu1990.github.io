@@ -21,22 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>URL中数字类型错误，导致url中的数字不能递增</title>
-    <url>/scrapy/scrapy_type.html</url>
-    <content><![CDATA[<h3 id="问题情况"><a href="#问题情况" class="headerlink" title="问题情况"></a>问题情况</h3><p>scrapy中，有需要对URL进行组合，比如URL中有关于页数，比如展示内容数量，我这个基础不扎实的家伙，实际碰到Python的数据类型，也会翻车。<br>额，群里一好友在上个星期的时候，问我：【为什么我写的scapy代码，不能翻页了】<br>然后丢给我压缩包。<br>然后……</p>
-<p>咕咕咕，我鸽了好几天。咕<del>~</del></p>
-<h3 id="实际代码"><a href="#实际代码" class="headerlink" title="实际代码"></a>实际代码</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">class WorldSpider(scrapy.Spider):</span><br><span class="line">    name = <span class="string">"world"</span></span><br><span class="line">    allowed_domains = [<span class="string">"j****.com"</span>]</span><br><span class="line">    base = <span class="string">'http://www.****/xinwen/****'</span></span><br><span class="line">    <span class="builtin-name">set</span> = <span class="string">"1"</span></span><br><span class="line">    end_url = <span class="string">'.html'</span></span><br><span class="line">    start_urls = [base + str(set) + end_url]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">···中间省略十几行代码。。。。嗯大概···</span><br><span class="line"></span><br><span class="line">        #问过他本人，他考虑的是人工组合一下url</span><br><span class="line">        <span class="keyword">if</span> self.<span class="builtin-name">set</span> &lt; 15:</span><br><span class="line">            self.<span class="builtin-name">set</span> += 1</span><br><span class="line">            url = self.base + str(self.set) + self.end_url</span><br><span class="line">            </span><br><span class="line">            <span class="builtin-name">print</span> self.set</span><br><span class="line">            yield scrapy.Request(url, <span class="attribute">callback</span>=self.parse)</span><br></pre></td></tr></table></figure>
-
-<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>原始代码的部分截取，<br>代码中的set = “1”，<br>下面有需求，<br>需要组合成<strong><a href="http://www.dsdfsdf.cm/｛set｝.html" target="_blank" rel="noopener">http://www.dsdfsdf.cm/｛set｝.html</a></strong><br>数字自增，要<strong>int类型</strong>，<br>二话不说，直接改成<strong>set = 1</strong><br>运行一下代码，<br>编辑器报了一些错误：<br>具体是url这块的类型有问题，但是又没有严重影响url<br>不考虑严谨性，就这样了。</p>
-]]></content>
-      <categories>
-        <category>scrapy</category>
-      </categories>
-      <tags>
-        <tag>scrapy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo博客搭建、优化备忘录</title>
     <url>/hexo/hexo_build.html</url>
     <content><![CDATA[<h2 id="文章URL优化"><a href="#文章URL优化" class="headerlink" title="文章URL优化"></a>文章URL优化</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>如果做过SEO优化工作，那么必然知道中文URL对搜索引擎不友好。<br>通常将文章URL规划为这样：</p>
@@ -60,6 +44,22 @@
       <tags>
         <tag>URL设置</tag>
         <tag>博客优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>URL中数字类型错误，导致url中的数字不能递增</title>
+    <url>/scrapy/scrapy_type.html</url>
+    <content><![CDATA[<h3 id="问题情况"><a href="#问题情况" class="headerlink" title="问题情况"></a>问题情况</h3><p>scrapy中，有需要对URL进行组合，比如URL中有关于页数，比如展示内容数量，我这个基础不扎实的家伙，实际碰到Python的数据类型，也会翻车。<br>额，群里一好友在上个星期的时候，问我：【为什么我写的scapy代码，不能翻页了】<br>然后丢给我压缩包。<br>然后……</p>
+<p>咕咕咕，我鸽了好几天。咕<del>~</del></p>
+<h3 id="实际代码"><a href="#实际代码" class="headerlink" title="实际代码"></a>实际代码</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">class WorldSpider(scrapy.Spider):</span><br><span class="line">    name = <span class="string">"world"</span></span><br><span class="line">    allowed_domains = [<span class="string">"j****.com"</span>]</span><br><span class="line">    base = <span class="string">'http://www.****/xinwen/****'</span></span><br><span class="line">    <span class="builtin-name">set</span> = <span class="string">"1"</span></span><br><span class="line">    end_url = <span class="string">'.html'</span></span><br><span class="line">    start_urls = [base + str(set) + end_url]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">···中间省略十几行代码。。。。嗯大概···</span><br><span class="line"></span><br><span class="line">        #问过他本人，他考虑的是人工组合一下url</span><br><span class="line">        <span class="keyword">if</span> self.<span class="builtin-name">set</span> &lt; 15:</span><br><span class="line">            self.<span class="builtin-name">set</span> += 1</span><br><span class="line">            url = self.base + str(self.set) + self.end_url</span><br><span class="line">            </span><br><span class="line">            <span class="builtin-name">print</span> self.set</span><br><span class="line">            yield scrapy.Request(url, <span class="attribute">callback</span>=self.parse)</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>原始代码的部分截取，<br>代码中的set = “1”，<br>下面有需求，<br>需要组合成<strong><a href="http://www.dsdfsdf.cm/｛set｝.html" target="_blank" rel="noopener">http://www.dsdfsdf.cm/｛set｝.html</a></strong><br>数字自增，要<strong>int类型</strong>，<br>二话不说，直接改成<strong>set = 1</strong><br>运行一下代码，<br>编辑器报了一些错误：<br>具体是url这块的类型有问题，但是又没有严重影响url<br>不考虑严谨性，就这样了。</p>
+]]></content>
+      <categories>
+        <category>scrapy</category>
+      </categories>
+      <tags>
+        <tag>scrapy</tag>
       </tags>
   </entry>
   <entry>
@@ -106,6 +106,19 @@
       </tags>
   </entry>
   <entry>
+    <title>很佩服那些说死就死的人</title>
+    <url>/other/undefined.html</url>
+    <content><![CDATA[<p>很佩服那些说死就死的人，不是那种一边说着“好想去死”，一边又不敢行动。<br>自卑到骨子里，几乎所有时间都处在低落的情绪，对几乎所有活动丧失兴趣，经常感到自己毫无价值，也有想过，能直接无痛的死亡，不是一件很好的事情？</p>
+<p>——真不是网抑云时间</p>
+<p>好像是从小学三年级得大病住院起，人就特别负面，经常性的想到各种死。</p>
+<p>高中学当时虽然看的多的是小说，但是郭敬明的“大逆行事”，对我影响特别深。特别是“悲伤逆流成河”中，肮脏、带有恶臭的小巷，八卦的家庭主妇，还有父母日常的打骂，小孩子玩耍的欢笑声，都感染着我。高一的时候，同班同学多数都叛逆，有打架，抽烟，打牌；自己也经常跑去黑网吧；因此多多少少也接触到校园暴力。所以也能感同身受。</p>
+<p>然后别人买素描本，自己也买了一本，不过画的不是苹果的素描，而是割腕的素描，人还有点“变态”似的，拿给别人看。现在想来，可能当时的自己，只是想要别人一句“你有什么不开心的事情么？”</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>树莓派安装hexo_将树莓派当成移动博客编辑器</title>
     <url>/other/raspberry_hexo.html</url>
     <content><![CDATA[<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>onenote——python代码高亮不好，缩进也有问题。所以优先不考虑。<br>为知笔记——几年前免费用的时候，好用到原地爆炸。<br>只不过现在商业化了，在有印象笔记等笔记类软件还在免费的状态下，就不考虑为知笔记了。<br>说实话，用hexo做笔记，其实有点装b的味道在里面，<br>不过，如果让我买一个域名，还要做备案，再买一个虚拟主机，或者去国外平台买一个服务器使用。<br>比较大可能会是，博客或者那啥上网，全部搭建好了，然后突然就，整个人进入贤者模式（就是半年没写一篇文章）。</p>
@@ -134,19 +147,6 @@
         <tag>树莓派</tag>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>很佩服那些说死就死的人</title>
-    <url>/other/undefined.html</url>
-    <content><![CDATA[<p>很佩服那些说死就死的人，不是那种一边说着“好想去死”，一边又不敢行动。<br>自卑到骨子里，几乎所有时间都处在低落的情绪，对几乎所有活动丧失兴趣，经常感到自己毫无价值，也有想过，能直接无痛的死亡，不是一件很好的事情？</p>
-<p>——真不是网抑云时间</p>
-<p>好像是从小学三年级得大病住院起，人就特别负面，经常性的想到各种死。</p>
-<p>高中学当时虽然看的多的是小说，但是郭敬明的“大逆行事”，对我影响特别深。特别是“悲伤逆流成河”中，肮脏、带有恶臭的小巷，八卦的家庭主妇，还有父母日常的打骂，小孩子玩耍的欢笑声，都感染着我。高一的时候，同班同学多数都叛逆，有打架，抽烟，打牌；自己也经常跑去黑网吧；因此多多少少也接触到校园暴力。所以也能感同身受。</p>
-<p>然后别人买素描本，自己也买了一本，不过画的不是苹果的素描，而是割腕的素描，人还有点“变态”似的，拿给别人看。现在想来，可能当时的自己，只是想要别人一句“你有什么不开心的事情么？”</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
   </entry>
   <entry>
     <title>树莓派安装v2</title>
