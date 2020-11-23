@@ -21,6 +21,22 @@
       </tags>
   </entry>
   <entry>
+    <title>URL中数字类型错误，导致url中的数字不能递增</title>
+    <url>/scrapy/scrapy_type.html</url>
+    <content><![CDATA[<h3 id="问题情况"><a href="#问题情况" class="headerlink" title="问题情况"></a>问题情况</h3><p>scrapy中，有需要对URL进行组合，比如URL中有关于页数，比如展示内容数量，我这个基础不扎实的家伙，实际碰到Python的数据类型，也会翻车。<br>额，群里一好友在上个星期的时候，问我：【为什么我写的scapy代码，不能翻页了】<br>然后丢给我压缩包。<br>然后……</p>
+<p>咕咕咕，我鸽了好几天。咕<del>~</del></p>
+<h3 id="实际代码"><a href="#实际代码" class="headerlink" title="实际代码"></a>实际代码</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">class WorldSpider(scrapy.Spider):</span><br><span class="line">    name = <span class="string">"world"</span></span><br><span class="line">    allowed_domains = [<span class="string">"j****.com"</span>]</span><br><span class="line">    base = <span class="string">'http://www.****/xinwen/****'</span></span><br><span class="line">    <span class="builtin-name">set</span> = <span class="string">"1"</span></span><br><span class="line">    end_url = <span class="string">'.html'</span></span><br><span class="line">    start_urls = [base + str(set) + end_url]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">···中间省略十几行代码。。。。嗯大概···</span><br><span class="line"></span><br><span class="line">        #问过他本人，他考虑的是人工组合一下url</span><br><span class="line">        <span class="keyword">if</span> self.<span class="builtin-name">set</span> &lt; 15:</span><br><span class="line">            self.<span class="builtin-name">set</span> += 1</span><br><span class="line">            url = self.base + str(self.set) + self.end_url</span><br><span class="line">            </span><br><span class="line">            <span class="builtin-name">print</span> self.set</span><br><span class="line">            yield scrapy.Request(url, <span class="attribute">callback</span>=self.parse)</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>原始代码的部分截取，<br>代码中的set = “1”，<br>下面有需求，<br>需要组合成<strong><a href="http://www.dsdfsdf.cm/｛set｝.html" target="_blank" rel="noopener">http://www.dsdfsdf.cm/｛set｝.html</a></strong><br>数字自增，要<strong>int类型</strong>，<br>二话不说，直接改成<strong>set = 1</strong><br>运行一下代码，<br>编辑器报了一些错误：<br>具体是url这块的类型有问题，但是又没有严重影响url<br>不考虑严谨性，就这样了。</p>
+]]></content>
+      <categories>
+        <category>scrapy</category>
+      </categories>
+      <tags>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo博客搭建、优化备忘录</title>
     <url>/hexo/hexo_build.html</url>
     <content><![CDATA[<h2 id="文章URL优化"><a href="#文章URL优化" class="headerlink" title="文章URL优化"></a>文章URL优化</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>如果做过SEO优化工作，那么必然知道中文URL对搜索引擎不友好。<br>通常将文章URL规划为这样：</p>
@@ -44,22 +60,6 @@
       <tags>
         <tag>URL设置</tag>
         <tag>博客优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>URL中数字类型错误，导致url中的数字不能递增</title>
-    <url>/scrapy/scrapy_type.html</url>
-    <content><![CDATA[<h3 id="问题情况"><a href="#问题情况" class="headerlink" title="问题情况"></a>问题情况</h3><p>scrapy中，有需要对URL进行组合，比如URL中有关于页数，比如展示内容数量，我这个基础不扎实的家伙，实际碰到Python的数据类型，也会翻车。<br>额，群里一好友在上个星期的时候，问我：【为什么我写的scapy代码，不能翻页了】<br>然后丢给我压缩包。<br>然后……</p>
-<p>咕咕咕，我鸽了好几天。咕<del>~</del></p>
-<h3 id="实际代码"><a href="#实际代码" class="headerlink" title="实际代码"></a>实际代码</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">class WorldSpider(scrapy.Spider):</span><br><span class="line">    name = <span class="string">"world"</span></span><br><span class="line">    allowed_domains = [<span class="string">"j****.com"</span>]</span><br><span class="line">    base = <span class="string">'http://www.****/xinwen/****'</span></span><br><span class="line">    <span class="builtin-name">set</span> = <span class="string">"1"</span></span><br><span class="line">    end_url = <span class="string">'.html'</span></span><br><span class="line">    start_urls = [base + str(set) + end_url]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">···中间省略十几行代码。。。。嗯大概···</span><br><span class="line"></span><br><span class="line">        #问过他本人，他考虑的是人工组合一下url</span><br><span class="line">        <span class="keyword">if</span> self.<span class="builtin-name">set</span> &lt; 15:</span><br><span class="line">            self.<span class="builtin-name">set</span> += 1</span><br><span class="line">            url = self.base + str(self.set) + self.end_url</span><br><span class="line">            </span><br><span class="line">            <span class="builtin-name">print</span> self.set</span><br><span class="line">            yield scrapy.Request(url, <span class="attribute">callback</span>=self.parse)</span><br></pre></td></tr></table></figure>
-
-<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>原始代码的部分截取，<br>代码中的set = “1”，<br>下面有需求，<br>需要组合成<strong><a href="http://www.dsdfsdf.cm/｛set｝.html" target="_blank" rel="noopener">http://www.dsdfsdf.cm/｛set｝.html</a></strong><br>数字自增，要<strong>int类型</strong>，<br>二话不说，直接改成<strong>set = 1</strong><br>运行一下代码，<br>编辑器报了一些错误：<br>具体是url这块的类型有问题，但是又没有严重影响url<br>不考虑严谨性，就这样了。</p>
-]]></content>
-      <categories>
-        <category>scrapy</category>
-      </categories>
-      <tags>
-        <tag>scrapy</tag>
       </tags>
   </entry>
   <entry>
