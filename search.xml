@@ -63,20 +63,6 @@
       </tags>
   </entry>
   <entry>
-    <title>很佩服那些说死就死的人</title>
-    <url>/other/undefined.html</url>
-    <content><![CDATA[<p>很佩服那些说死就死的人，不是那种一边说着“好想去死”，一边又不敢行动。<br>自卑到骨子里，几乎所有时间都处在低落的情绪，对几乎所有活动丧失兴趣。<br>经常感到自己毫无价值，也有想过，能直接无痛的死亡，不是一件很好的事情？<br><img src="https://i.loli.net/2020/12/11/6UdrPCTOsgS7QqG.jpg" alt="自卑"></p>
-<p>——真不是网抑云时间</p>
-<p>好像是从小学三年级得大病住院起，人就特别负面，经常性的想到各种死。</p>
-<p>高中学当时虽然看的多的是小说，但是郭敬明的“大逆行事”，对我影响特别深。<br>特别是“悲伤逆流成河”中，肮脏、带有恶臭的小巷，八卦的家庭主妇，还有父母日常的打骂，小孩子玩耍的欢笑声，都感染着我。<br>高一的时候，同班同学多数都叛逆，有打架，抽烟，打牌；自己也经常跑去黑网吧；因此多多少少也接触到校园暴力。<br>所以也能感同身受。</p>
-<p>然后别人买素描本，自己也买了一本，不过画的不是苹果的素描，而是割腕的素描，人还有点“变态”似的，拿给别人看。<br>现在想来，可能当时的自己，只是想要别人一句“你有什么不开心的事情么？”</p>
-<p><img src="https://i.loli.net/2020/12/11/gPtETDa74OZUn8m.jpg" alt="素描"></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
     <title>关键词规划师,用python获取流量关键词</title>
     <url>/python/pykeyword.html</url>
     <content><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
@@ -120,44 +106,18 @@
       </tags>
   </entry>
   <entry>
-    <title>树莓派安装v2</title>
-    <url>/other/raspberry_v2ray.html</url>
-    <content><![CDATA[<h3 id="近期折腾"><a href="#近期折腾" class="headerlink" title="近期折腾"></a>近期折腾</h3><p>公司里办公室XP电脑，摸鱼的时候，各种软件装不起来，各种软件不适应XP环境，特别是有些阀门资料，阀门材料，在百度搜索结果中，因为SEO优化的原因，已经很少有比较好的内容了，所以有时候需要科学上网到谷歌去找内容。</p>
-<p>于是先科学上网，搜索虚拟机安装，搜索虚拟机共享网络给电脑（搜索时，各种天马行空的关键词），搜索全局科学上网之类。</p>
-<p>因为绑定了百度站长工具，做了提交，避免喝茶，于是不细说，自己当做记事本，记录一下。</p>
-<p>虚拟机安装v2，然后虚拟机通过桥接，连接宿主电脑，虚拟机要设置好IPV4，V2要开启【允许来自局域网的连接】，记住【基础设置】内的【本地监听端口】。这个就不敞开说了。然后树莓派要怎么折腾呢？安装V以后，再安装proxychains，这样的话可以共享给apt-get,pip。至于为什么不直接换apt-get,pip源呢？大概是因为下载v的时候，受不了github的下载速度。所以索性就找全局的方法。</p>
-<p>如不合fa，请通知<a href="mailto:1849806933@qq.com">1849806933@qq.com</a>删除。</p>
+    <title>很佩服那些说死就死的人</title>
+    <url>/other/undefined.html</url>
+    <content><![CDATA[<p>很佩服那些说死就死的人，不是那种一边说着“好想去死”，一边又不敢行动。<br>自卑到骨子里，几乎所有时间都处在低落的情绪，对几乎所有活动丧失兴趣。<br>经常感到自己毫无价值，也有想过，能直接无痛的死亡，不是一件很好的事情？<br><img src="https://i.loli.net/2020/12/11/6UdrPCTOsgS7QqG.jpg" alt="自卑"></p>
+<p>——真不是网抑云时间</p>
+<p>好像是从小学三年级得大病住院起，人就特别负面，经常性的想到各种死。</p>
+<p>高中学当时虽然看的多的是小说，但是郭敬明的“大逆行事”，对我影响特别深。<br>特别是“悲伤逆流成河”中，肮脏、带有恶臭的小巷，八卦的家庭主妇，还有父母日常的打骂，小孩子玩耍的欢笑声，都感染着我。<br>高一的时候，同班同学多数都叛逆，有打架，抽烟，打牌；自己也经常跑去黑网吧；因此多多少少也接触到校园暴力。<br>所以也能感同身受。</p>
+<p>然后别人买素描本，自己也买了一本，不过画的不是苹果的素描，而是割腕的素描，人还有点“变态”似的，拿给别人看。<br>现在想来，可能当时的自己，只是想要别人一句“你有什么不开心的事情么？”</p>
+<p><img src="https://i.loli.net/2020/12/11/gPtETDa74OZUn8m.jpg" alt="素描"></p>
 ]]></content>
       <categories>
         <category>其他</category>
       </categories>
-      <tags>
-        <tag>树莓派</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>那个心直口快的人</title>
-    <url>/other/xinzhikoukuai.html</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/10/24/VeXxTQIAZyad5qF.jpg" alt="海上孤舟"></p>
-<p>那个<strong>心直口快</strong>的男人，<strong>‘死’</strong>在了30岁。</p>
-<p>他不想和他们一个样，<br>和小丑一样妆模作样。<br>不想因为一个不好笑的笑话，笑地“荡漾”，<br>他觉得太不像样。</p>
-<p>没有诗和远方，<br>不喜欢喝酒，也没有故事。<br>每天瞎忙着，还常做错事。<br>容易成为点头之交（或深交），也容易被利用。</p>
-<p><strong>30岁了</strong>，还没升职。<br><strong>30岁了</strong>，还没成家。<br><strong>30岁了</strong>，还没学会讨好人。<br>30岁的他，不会因为利益，<br>去做违背自己内心意愿的事情。</p>
-<p>而那个团体里的，那个人，<br>因为他的利益受损了，<br>像是被踩着了尾巴，<br>着急地龇牙咧嘴，又张牙舞爪。</p>
-<p><img src="https://i.loli.net/2020/10/24/3cOukbxFGztZX7K.jpg" alt="小丑"></p>
-<p>偶尔和他争吵几句，<br>又发现和他吵的又不在一个点上。</p>
-<p>渐渐学习不暴露自己的情绪，<br>渐渐明白了有些事情，<br>你有不同意见，那个团队不是先想着解决问题，<br>而是想着如何解决你。</p>
-<p>那个<strong>心直口快</strong>的男人的灵魂，在<strong>30岁</strong>的时候，已经<strong>‘死’</strong>了。</p>
-<p>渐渐懂得了<strong>心直口快</strong>会让自己的路越走越<strong>窄</strong>。<br>而自己呢，<strong>又没有能力</strong>，能直接把老板<strong>炒</strong>了。</p>
-<p>渐渐地，<strong>不再</strong>在日常的聊天的中吐槽<strong>工作不顺</strong>，<br><strong>也关闭了</strong>微信朋友圈。</p>
-<p>等到肉身死了，那个心直口快的人，也就真死了。</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>心直口快</tag>
-      </tags>
   </entry>
   <entry>
     <title>树莓派安装hexo_将树莓派当成移动博客编辑器</title>
@@ -187,6 +147,22 @@
       <tags>
         <tag>树莓派</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派安装v2</title>
+    <url>/other/raspberry_v2ray.html</url>
+    <content><![CDATA[<h3 id="近期折腾"><a href="#近期折腾" class="headerlink" title="近期折腾"></a>近期折腾</h3><p>公司里办公室XP电脑，摸鱼的时候，各种软件装不起来，各种软件不适应XP环境，特别是有些阀门资料，阀门材料，在百度搜索结果中，因为SEO优化的原因，已经很少有比较好的内容了，所以有时候需要科学上网到谷歌去找内容。</p>
+<p>于是先科学上网，搜索虚拟机安装，搜索虚拟机共享网络给电脑（搜索时，各种天马行空的关键词），搜索全局科学上网之类。</p>
+<p>因为绑定了百度站长工具，做了提交，避免喝茶，于是不细说，自己当做记事本，记录一下。</p>
+<p>虚拟机安装v2，然后虚拟机通过桥接，连接宿主电脑，虚拟机要设置好IPV4，V2要开启【允许来自局域网的连接】，记住【基础设置】内的【本地监听端口】。这个就不敞开说了。然后树莓派要怎么折腾呢？安装V以后，再安装proxychains，这样的话可以共享给apt-get,pip。至于为什么不直接换apt-get,pip源呢？大概是因为下载v的时候，受不了github的下载速度。所以索性就找全局的方法。</p>
+<p>如不合fa，请通知<a href="mailto:1849806933@qq.com">1849806933@qq.com</a>删除。</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
       </tags>
   </entry>
   <entry>
@@ -253,6 +229,30 @@
         <tag>Sublime Text3</tag>
         <tag>SFTP</tag>
         <tag>远程连接</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>那个心直口快的人</title>
+    <url>/other/xinzhikoukuai.html</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/10/24/VeXxTQIAZyad5qF.jpg" alt="海上孤舟"></p>
+<p>那个<strong>心直口快</strong>的男人，<strong>‘死’</strong>在了30岁。</p>
+<p>他不想和他们一个样，<br>和小丑一样妆模作样。<br>不想因为一个不好笑的笑话，笑地“荡漾”，<br>他觉得太不像样。</p>
+<p>没有诗和远方，<br>不喜欢喝酒，也没有故事。<br>每天瞎忙着，还常做错事。<br>容易成为点头之交（或深交），也容易被利用。</p>
+<p><strong>30岁了</strong>，还没升职。<br><strong>30岁了</strong>，还没成家。<br><strong>30岁了</strong>，还没学会讨好人。<br>30岁的他，不会因为利益，<br>去做违背自己内心意愿的事情。</p>
+<p>而那个团体里的，那个人，<br>因为他的利益受损了，<br>像是被踩着了尾巴，<br>着急地龇牙咧嘴，又张牙舞爪。</p>
+<p><img src="https://i.loli.net/2020/10/24/3cOukbxFGztZX7K.jpg" alt="小丑"></p>
+<p>偶尔和他争吵几句，<br>又发现和他吵的又不在一个点上。</p>
+<p>渐渐学习不暴露自己的情绪，<br>渐渐明白了有些事情，<br>你有不同意见，那个团队不是先想着解决问题，<br>而是想着如何解决你。</p>
+<p>那个<strong>心直口快</strong>的男人的灵魂，在<strong>30岁</strong>的时候，已经<strong>‘死’</strong>了。</p>
+<p>渐渐懂得了<strong>心直口快</strong>会让自己的路越走越<strong>窄</strong>。<br>而自己呢，<strong>又没有能力</strong>，能直接把老板<strong>炒</strong>了。</p>
+<p>渐渐地，<strong>不再</strong>在日常的聊天的中吐槽<strong>工作不顺</strong>，<br><strong>也关闭了</strong>微信朋友圈。</p>
+<p>等到肉身死了，那个心直口快的人，也就真死了。</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>心直口快</tag>
       </tags>
   </entry>
 </search>
