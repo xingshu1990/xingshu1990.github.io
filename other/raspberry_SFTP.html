@@ -103,6 +103,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h3 id="需求重现"><a href="#需求重现" class="headerlink" title="需求重现"></a>需求重现</h3><p>电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，<br>或者一些主板稀奇古怪的原因，导致不能安装W7及以上的系统，另外部分Python库只有linux下能安装运行。</p>
+<a id="more"></a>
 <p>于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。</p>
 <p>问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？<br>答：对于我来说，确实不香。主要原因是nano的复制粘贴不方便，也没有代码补全，vim需要一定的学习成本，还不如直接一点，用安装好插件的sublime text3，编辑py代码，更改sftp的sftp-config.json文件，自动保存上传，然后再切换到xshell 进行远程调试。</p>
 <p>问题2：为什么不用vscode、pychram远程连接？<br>答:vscode确实很好用，但是XP安装不起来（没办法，非程序员，只是传统行业中的销售人员，偶尔摸鱼看点Python编程）。pycharm对于系统配置要求比较高，安装旧版本的pycharm，也是比较卡，于是就优先考虑pycharm。</p>

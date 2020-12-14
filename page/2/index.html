@@ -114,21 +114,48 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="文章URL优化"><a href="#文章URL优化" class="headerlink" title="文章URL优化"></a>文章URL优化</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>如果做过SEO优化工作，那么必然知道中文URL对搜索引擎不友好。<br>通常将文章URL规划为这样：</p>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-variable">&#123;域名&#125;</span><span class="xml">/</span><span class="template-variable">&#123;类目或者分类&#125;</span><span class="xml">/文章.html</span></span><br></pre></td></tr></table></figure>
-<p>于是我们需要这样操作：</p>
-<h3 id="将类目或者分类英文化"><a href="#将类目或者分类英文化" class="headerlink" title="将类目或者分类英文化"></a>将类目或者分类英文化</h3><p>找到并编辑_config.yml中的# Category &amp; Tag</p>
-<p><img src="https://i.loli.net/2020/03/03/NzMnhUSIGkqbxRl.jpg" alt="category_map_tag_map.jpg"></p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Category &amp; Tag</span></span><br><span class="line"><span class="symbol">default_category:</span> uncategorized</span><br><span class="line"><span class="meta">#今后有新的分类和关键词都需要在这里一一规划好</span></span><br><span class="line"><span class="symbol">category_map:</span></span><br><span class="line">  爬虫: spider</span><br><span class="line"><span class="symbol">tag_map:</span></span><br><span class="line">  爬虫: spider</span><br></pre></td></tr></table></figure>
+  文章URL优化
+需求分析
+如果做过SEO优化工作，那么必然知道中文URL对搜索引擎不友好。
+通常将文章URL规划为这样：
 
-<h3 id="设置文章URL"><a href="#设置文章URL" class="headerlink" title="设置文章URL"></a>设置文章URL</h3><p>打开程序配置下的_config.yml，查找permalink，<br>原始内容如下：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">permalink:</span> <span class="symbol">:year/</span><span class="symbol">:month/</span><span class="symbol">:day/</span><span class="symbol">:title/</span></span><br></pre></td></tr></table></figure>
-<p>将其修改成这样：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">permalink:</span> <span class="symbol">:category/</span><span class="symbol">:urlname</span>.html</span><br></pre></td></tr></table></figure>
-<p>urlname是在每篇博客的Front-matter中定义的一个变量。也是为每篇博客取的英文名字。</p>
-<p>打开相应的文章的md文件，比如本篇文章</p>
-<p>本文的配置如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">hexo博客搭建、优化备忘录</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-29</span> <span class="number">23</span><span class="string">:36:22</span></span><br><span class="line"><span class="comment">#将文章放置在什么分类下面</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">爬虫</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">爬虫</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Python</span></span><br><span class="line"><span class="attr">urlname:</span> <span class="string">hexo_build</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="string">这部分可编写纯文本内容</span> <span class="string">Markdown</span></span><br></pre></td></tr></table></figure> 
+1
+
+
+{域名}/{类目或者分类}/文章.html
+
+
+于是我们需要这样操作：
+
+将类目或者分类英文化
+找到并编辑_config.yml中的# Category & Tag
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+# Category & Tag
+default_category: uncategorized
+#今后有新的分类和关键词都需要在这里一一规划好
+category_map:
+  爬虫: spider
+tag_map:
+  爬虫: spider
+
+
+设置文章URL
+ 
+      <a class="article-more-link" href="/hexo/hexo_build.html"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -180,12 +207,19 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="百度百科介绍"><a href="#百度百科介绍" class="headerlink" title="百度百科介绍"></a>百度百科介绍</h2><p>同理心（Empathy），亦译为“设身处地理解”、“感情移入”、“神入”、“共感”、“共情”。泛指心理换位、将心比心。亦即设身处地地对他人的情绪和情感的认知性的觉知、把握与理解。 主要体现在情绪自控、换位思考、倾听能力以及表达尊重等与情商相关的方面。</p>
-<h2 id="百度百科-同理心-原则"><a href="#百度百科-同理心-原则" class="headerlink" title="百度百科-同理心-原则"></a>百度百科-同理心-原则</h2><p>1.我怎么对待别人，别人就怎么对待我。<br>2.想他人理解我，就要首先理解他人。将心比心，才会被人理解。<br>3.别人眼中的自己，才是真正存在的自己。学会以别人的角度看问题，并据此改进自己在他们眼中的形象。<br>4.只能修正自己，不能修正别人。想成功地与人相处，让别人尊重自己的想法，惟有先改变自己。<br>5.真诚坦白的人，才是值得信任的人。<br>6.真情流露的人，才能得到真情回报。</p>
-<h2 id="百度百科-同理心-等级"><a href="#百度百科-同理心-等级" class="headerlink" title="百度百科-同理心-等级"></a>百度百科-同理心-等级</h2><p>A-1：很少从他人的角度思考问题，做事情很少考虑到他人的感受；沟通时讲客套话，无法引起对方的共鸣，对方也不愿意将自己的真实想法说出来；不愿意倾听；安排事务几乎不考虑下属的需要。<br>A-0：能够从别人的角度思考问题，做事情会考虑到他人的感受；与人沟通比较真诚，愿意将自己的一部分想法表露出来；能让人觉得被理解被包容；学会倾听，工作中尽量考虑对方的需要。<br>A+1：能够站在对方的角度考虑问题，想对方之所想，急对方之所急；能够使人不知不觉地将内心的想法，感受说出来；能够让人觉得被理解，被包容；能够用心倾听；在安排事务时，尽量照顾到对方的需要，并愿意做出调整。<br>A+2：将心比心，设身处地的去感受和体谅别人，并以此作为工作依据。有优秀的洞察力与心理分析能力，能从别人的表情、语气判断他人的情绪。投其所好，真诚，说到听者想听，听到说者想说；以对方适应的形式沟通。</p>
-<p>上面复制百科的内容，复制的够多了，水了大概也有几百个字了吧。那么，【把我推向深渊】究竟是怎么样？</p>
-<p>你有这样的情况么：<br>1.家里不拮据，甚至还有房子可以出租给别人，但，除非夏天实在热得连电风扇，吹出的风都是热的，不然就死活不开空调。<br>2.脑海里经常性的出现乱七八糟的想法：今天晚上20℃多，还没风，我还有空调电风扇，路上的乞丐怎么办？外来务工人员他们会不会舍不得开空调？<br>3.一天24小时 一个月30天左右 电脑开着不关机，拿到缴费单，发现家里总电费直冲600元左右，有一点小心疼。<br>4.比特币大火、云<em>惠大火，明知道国内国外跟风出现的一些新东西，如果早一点跟着进去投资，就可以赚一波走人。但是在心底里有一个声音：我拉朋友进云</em>惠，云*惠跑路了，我倒是早退出了，可朋友的钱还在里面，怎么办？<br>5.工作中，知道有些事情的错误发展，不是自己的原因造成的，总硬是为他人找理由，认为是自己还不够细腻，还不够认真，做的不够充分。<br>…………<br>过度的为他人考虑，往往会在自己内心产生大量负面情绪，时间长了，人也就卑微了，消极了。</p>
- 
+  百度百科介绍
+同理心（Empathy），亦译为“设身处地理解”、“感情移入”、“神入”、“共感”、“共情”。泛指心理换位、将心比心。亦即设身处地地对他人的情绪和情感的认知性的觉知、把握与理解。 主要体现在情绪自控、换位思考、倾听能力以及表达尊重等与情商相关的方面。
+
+百度百科-同理心-原则
+1.我怎么对待别人，别人就怎么对待我。
+2.想他人理解我，就要首先理解他人。将心比心，才会被人理解。
+3.别人眼中的自己，才是真正存在的自己。学会以别人的角度看问题，并据此改进自己在他们眼中的形象。
+4.只能修正自己，不能修正别人。想成功地与人相处，让别人尊重自己的想法，惟有先改变自己。
+5.真诚坦白的人， 
+      <a class="article-more-link" href="/other/tonglixin.html"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>

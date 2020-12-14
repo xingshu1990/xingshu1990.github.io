@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://xingshu1990.github.io/other/dingzhen.html</loc>
+    <loc>https://xingshu1990.github.io/other/raspberry_SFTP.html</loc>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
+    <loc>https://xingshu1990.github.io/python/py_image.html</loc>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
+    <loc>https://xingshu1990.github.io/other/raspberry_v2ray.html</loc>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
+    <loc>https://xingshu1990.github.io/other/raspberry_hexo.html</loc>
     <lastmod>2020-12-14</lastmod>
   </url>
   <url>
     <loc>https://xingshu1990.github.io/other/undefined.html</loc>
-    <lastmod>2020-12-11</lastmod>
-  </url>
-  <url>
-    <loc>https://xingshu1990.github.io/other/xinzhikoukuai.html</loc>
-    <lastmod>2020-11-20</lastmod>
-  </url>
-  <url>
-    <loc>https://xingshu1990.github.io/other/raspberry_hexo.html</loc>
-    <lastmod>2020-07-11</lastmod>
-  </url>
-  <url>
-    <loc>https://xingshu1990.github.io/other/raspberry_SFTP.html</loc>
-    <lastmod>2020-06-20</lastmod>
-  </url>
-  <url>
-    <loc>https://xingshu1990.github.io/other/raspberry_v2ray.html</loc>
-    <lastmod>2020-06-20</lastmod>
+    <lastmod>2020-12-14</lastmod>
   </url>
   <url>
     <loc>https://xingshu1990.github.io/other/tonglixin.html</loc>
-    <lastmod>2020-04-02</lastmod>
-  </url>
-  <url>
-    <loc>https://xingshu1990.github.io/scrapy/scrapy_type.html</loc>
-    <lastmod>2020-04-02</lastmod>
-  </url>
-  <url>
-    <loc>https://xingshu1990.github.io/python/py_image.html</loc>
-    <lastmod>2020-04-01</lastmod>
+    <lastmod>2020-12-14</lastmod>
   </url>
   <url>
     <loc>https://xingshu1990.github.io/python/pykeyword.html</loc>
-    <lastmod>2020-03-22</lastmod>
+    <lastmod>2020-12-14</lastmod>
   </url>
   <url>
-    <loc>https://xingshu1990.github.io/python/xp_scrapy.html</loc>
-    <lastmod>2020-03-22</lastmod>
+    <loc>https://xingshu1990.github.io/scrapy/scrapy_type.html</loc>
+    <lastmod>2020-12-14</lastmod>
   </url>
   <url>
     <loc>https://xingshu1990.github.io/hexo/hexo_build.html</loc>
-    <lastmod>2020-03-11</lastmod>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
+    <loc>https://xingshu1990.github.io/python/xp_scrapy.html</loc>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
+    <loc>https://xingshu1990.github.io/other/xinzhikoukuai.html</loc>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
+    <loc>https://xingshu1990.github.io/other/dingzhen.html</loc>
+    <lastmod>2020-12-14</lastmod>
   </url>
 </urlset> 
