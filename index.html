@@ -114,11 +114,16 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="场景重现"><a href="#场景重现" class="headerlink" title="场景重现"></a>场景重现</h2><blockquote>
-</blockquote>
-<p>有以下几列数据，需要删除掉|后面的内容：<br>JA41W/P8-150(lb) 3”|A351 CF8<br>J23W/R3-16 DN15|A182 F316L<br>JA41H/13Cr-150(lb) 3”|A216 WCB<br>D342F/R3-150(lb) 8”|A351 CF3M<br>HA44W/P8-150(lb) 3”|A351 CF8<br>20ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>25ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>80ZA40WCL150-1.0|CF8\P8<em>CF8</em>CF8<em>F304</em>SM<em>304+SM<br>20ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>25ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>40ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM*B8M\8M</p>
-<h2 id="操作介绍"><a href="#操作介绍" class="headerlink" title="操作介绍"></a>操作介绍</h2><p>手动删除当然是可以，<br>只不过容易删除数据，<br>而且稍微有一点点浪费时间，<br>于是想到了正则表达式。<br><br>打开c.runoob.com/front-end/854网站，<br>将上面的原始数据，复制到网站里<br>打开正则表达式的百度百科，<br>\w \s \d \d+ [a-z]……<br><br>最后测试出来，正则公式为：[|][\w].*</p>
- 
+  场景重现
+有以下几列数据，需要删除掉|后面的内容：
+JA41W/P8-150(lb) 3”|A351 CF8
+J23W/R3-16 DN15|A182 F316L
+JA41H/13Cr-150(lb) 3”|A216 WCB
+D342F/R3-150(lb) 8”|A351 CF3M
+HA44W/P8-150(lb) 3”|A351 CF8
+20ZA41WCL150d|F304\P8F304F304F304SM304+SMB8\8
+25ZA41WCL150d|F304\P8F304F304F304SM304+SMB8\8
+80ZA40WCL150-1.0|CF8\P8CF8CF8F304SM3 
       <a class="article-more-link" href="/re/valve_re.html"
         >阅读更多...</a
       >
