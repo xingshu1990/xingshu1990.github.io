@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">112</span>
+            <span class="post-count">175</span>
         </span>
     </span>
 
@@ -94,14 +94,18 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>##场景重现</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">有以下几列数据，需要删除掉|后面的内容：</span><br><span class="line">JA41W/P8-150(lb) 3<span class="string">"|A351 CF8</span></span><br><span class="line"><span class="string">J23W/R3-16 DN15|A182 F316L</span></span><br><span class="line"><span class="string">JA41H/13Cr-150(lb) 3"</span>|A216 WCB</span><br><span class="line">D342F/R3-150(lb) 8<span class="string">"|A351 CF3M</span></span><br><span class="line"><span class="string">HA44W/P8-150(lb) 3"</span>|A351 CF8</span><br><span class="line">20ZA41WCL150d|F304\P8<span class="number">*F304</span><span class="number">*F304</span><span class="number">*F304</span>*SM<span class="number">*304</span>+SM<span class="number">*B8</span>\8</span><br><span class="line">25ZA41WCL150d|F304\P8<span class="number">*F304</span><span class="number">*F304</span><span class="number">*F304</span>*SM<span class="number">*304</span>+SM<span class="number">*B8</span>\8</span><br><span class="line">80ZA40WCL150-1.0|CF8\P8<span class="number">*CF8</span><span class="number">*CF8</span><span class="number">*F304</span>*SM<span class="number">*304</span>+SM</span><br><span class="line">20ZA41WCL150d|F316L\R3<span class="number">*F316</span>L<span class="number">*F316</span>L<span class="number">*F316</span>L*SM<span class="number">*316</span>L+SM<span class="number">*B8</span>M\8M</span><br><span class="line">25ZA41WCL150d|F316L\R3<span class="number">*F316</span>L<span class="number">*F316</span>L<span class="number">*F316</span>L*SM<span class="number">*316</span>L+SM<span class="number">*B8</span>M\8M</span><br><span class="line">40ZA41WCL150d|F316L\R3<span class="number">*F316</span>L<span class="number">*F316</span>L<span class="number">*F316</span>L*SM<span class="number">*316</span>L+SM<span class="number">*B8</span>M\8M</span><br></pre></td></tr></table></figure>
+  <h2 id="场景重现"><a href="#场景重现" class="headerlink" title="场景重现"></a>场景重现</h2><blockquote>
+</blockquote>
+<p>有以下几列数据，需要删除掉|后面的内容：<br>JA41W/P8-150(lb) 3”|A351 CF8<br>J23W/R3-16 DN15|A182 F316L<br>JA41H/13Cr-150(lb) 3”|A216 WCB<br>D342F/R3-150(lb) 8”|A351 CF3M<br>HA44W/P8-150(lb) 3”|A351 CF8<br>20ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>25ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>80ZA40WCL150-1.0|CF8\P8<em>CF8</em>CF8<em>F304</em>SM<em>304+SM<br>20ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>25ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>40ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM*B8M\8M</p>
+<h2 id="操作介绍"><a href="#操作介绍" class="headerlink" title="操作介绍"></a>操作介绍</h2><p>手动删除当然是可以，<br>只不过容易删除数据，<br>而且稍微有一点点浪费时间，<br>于是想到了正则表达式。<br><br>打开c.runoob.com/front-end/854网站，<br>将上面的原始数据，复制到网站里<br>打开正则表达式的百度百科，<br>\w \s \d \d+ [a-z]……<br><br>最后测试出来，正则公式为：[|][\w].*</p>
  
       <!-- reward -->
       
@@ -168,15 +172,6 @@
 
    
   <nav class="article-nav">
-    
-      <a href="/python/py_image.html" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            用python生成带有背景图的文字图
-          
-        </div>
-      </a>
     
     
       <a href="/other/dingzhen.html" class="article-nav-link">

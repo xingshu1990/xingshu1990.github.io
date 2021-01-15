@@ -84,139 +84,6 @@
     
     
     <article
-  id="post-pykeyword"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/python/pykeyword.html"
-    >关键词规划师,用python获取流量关键词</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/python/pykeyword.html" class="article-date">
-  <time datetime="2021-01-15T07:07:14.835Z" itemprop="datePublished">2021-01-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  说明
- * 此篇文章代码较多，建议PC端浏览
- * config 以及 cookie需要自行抓包填写，数据来源为抓包’关键词规划师’
- * userid为整数类型，token、eventId、reqid为字符串类型
- * 后续为了方便python新人，会放上教学图片需求分析
-   百度竞价中的关键词规划师，是SEO从业者很好的关键词来源。
-   那要如何才能获取这里的关键词内容呢？
-   本代码是基于网络上2.7的版本，修改成3.*也能使用。
-   （其实根本就只是改了一下print，2333）
-
-本代码没有一步步教你如何解决登陆、获取cookie的问题，直接是采用登陆后的cookie，以及登 
-      <a class="article-more-link" href="/python/pykeyword.html"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%A7%84%E5%88%92%E5%B8%88/" rel="tag">关键词规划师</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-py_image"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/python/py_image.html"
-    >用python生成带有背景图的文字图</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/python/py_image.html" class="article-date">
-  <time datetime="2021-01-15T07:07:14.785Z" itemprop="datePublished">2021-01-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  环境模拟，如果老板给一个excel的关键词，让你做出带有文字的文字图，文字居中。没找到python能自动这样处理的代码。
-#####需要解决的问题
-
- * 来源关键词，数量比较大，网络上python生成图片的教程，都是单个关键词，生成单张图片的？
- * 图片如何保存 - 中文.jpg？
- * 文字能不能做到居中 ？
-
-一个python的大佬帮一个他的朋友折腾的东西，我这个只是大概模拟一下。
-他要做的是，从数据库的某一个字段中，取出数据，然后用python生成带有背景图的，白底黑字图片。文字竖着，从右到左，文字居中。
-我的这个伪代码，是生成带有背景图的文字图。
-
-同级目录下，存一张背景图，图片名 
-      <a class="article-more-link" href="/python/py_image.html"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
   id="post-valve_re"
   class="article article-type-post"
   itemscope
@@ -247,8 +114,10 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>##场景重现</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">有以下几列数据，需要删除掉|后面的内容：</span><br><span class="line">JA41W/P8-150(lb) 3<span class="string">"|A351 CF8</span></span><br><span class="line"><span class="string">J23W/R3-16 DN15|A182 F316L</span></span><br><span class="line"><span class="string">JA41H/13Cr-150(lb) 3"</span>|A216 WCB</span><br><span class="line">D342F/R3-150(lb) 8<span class="string">"|A351 CF3M</span></span><br><span class="line"><span class="string">HA44W/P8-150(lb) 3"</span>|A351 CF8</span><br><span class="line">20ZA41WCL150d|F304\P8<span class="number">*F304</span><span class="number">*F304</span><span class="number">*F304</span>*SM<span class="number">*304</span>+SM<span class="number">*B8</span>\8</span><br><span class="line">25ZA41WCL150d|F304\P8<span class="number">*F304</span><span class="number">*F304</span><span class="number">*F304</span>*SM<span class="number">*304</span>+SM<span class="number">*B8</span>\8</span><br><span class="line">80ZA40WCL150-1.0|CF8\P8<span class="number">*CF8</span><span class="number">*CF8</span><span class="number">*F304</span>*SM<span class="number">*304</span>+SM</span><br><span class="line">20ZA41WCL150d|F316L\R3<span class="number">*F316</span>L<span class="number">*F316</span>L<span class="number">*F316</span>L*SM<span class="number">*316</span>L+SM<span class="number">*B8</span>M\8M</span><br><span class="line">25ZA41WCL150d|F316L\R3<span class="number">*F316</span>L<span class="number">*F316</span>L<span class="number">*F316</span>L*SM<span class="number">*316</span>L+SM<span class="number">*B8</span>M\8M</span><br><span class="line">40ZA41WCL150d|F316L\R3<span class="number">*F316</span>L<span class="number">*F316</span>L<span class="number">*F316</span>L*SM<span class="number">*316</span>L+SM<span class="number">*B8</span>M\8M</span><br></pre></td></tr></table></figure>
+  <h2 id="场景重现"><a href="#场景重现" class="headerlink" title="场景重现"></a>场景重现</h2><blockquote>
+</blockquote>
+<p>有以下几列数据，需要删除掉|后面的内容：<br>JA41W/P8-150(lb) 3”|A351 CF8<br>J23W/R3-16 DN15|A182 F316L<br>JA41H/13Cr-150(lb) 3”|A216 WCB<br>D342F/R3-150(lb) 8”|A351 CF3M<br>HA44W/P8-150(lb) 3”|A351 CF8<br>20ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>25ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>80ZA40WCL150-1.0|CF8\P8<em>CF8</em>CF8<em>F304</em>SM<em>304+SM<br>20ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>25ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>40ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM*B8M\8M</p>
+<h2 id="操作介绍"><a href="#操作介绍" class="headerlink" title="操作介绍"></a>操作介绍</h2><p>手动删除当然是可以，<br>只不过容易删除数据，<br>而且稍微有一点点浪费时间，<br>于是想到了正则表达式。<br><br>打开c.runoob.com/front-end/854网站，<br>将上面的原始数据，复制到网站里<br>打开正则表达式的百度百科，<br>\w \s \d \d+ [a-z]……<br><br>最后测试出来，正则公式为：[|][\w].*</p>
  
       <a class="article-more-link" href="/re/valve_re.html"
         >阅读更多...</a
@@ -762,6 +631,166 @@ class WorldSpider(scrapy.Spider):
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-xp_scrapy"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/python/xp_scrapy.html"
+    >32位xp系统 Python3.4.4安装scrapy1.6.0</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/python/xp_scrapy.html" class="article-date">
+  <time datetime="2020-03-13T13:29:59.000Z" itemprop="datePublished">2020-03-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  32XP系统没人权！！！！
+Python3 XP系统能安装的最后一个版本为Python3.4.4
+以前在XP机子上安装过scrapy，还成功跑了python3的爬虫，不可能现在就安装不起来
+
+于是不管怎么样，打开命令行工具，输入pip install scrapy
+按照以往惯例，会有几次报错：比如C++ 10 C++14之类的ERROR
+直接打开https://www.lfd.uci.edu/~gohlke/pythonlibs/
+搜索相关第三方库的安装包
+居然大多数第三方库没有cp34！！！
+
+32XP系统没人权！！！！
+把系统中的python全部删除，下载了Anaconda3-2.3.0- 
+      <a class="article-more-link" href="/python/xp_scrapy.html"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-hexo_build"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/hexo/hexo_build.html"
+    >hexo博客搭建、优化备忘录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/hexo/hexo_build.html" class="article-date">
+  <time datetime="2020-02-29T15:36:22.000Z" itemprop="datePublished">2020-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  文章URL优化
+需求分析
+如果做过SEO优化工作，那么必然知道中文URL对搜索引擎不友好。
+通常将文章URL规划为这样：
+
+1
+
+
+{域名}/{类目或者分类}/文章.html
+
+
+于是我们需要这样操作：
+
+将类目或者分类英文化
+找到并编辑_config.yml中的# Category & Tag
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+# Category & Tag
+default_category: uncategorized
+#今后有新的分类和关键词都需要在这里一一规划好
+category_map:
+  爬虫: spider
+tag_map:
+  爬虫: spider
+
+
+设置文章URL
+ 
+      <a class="article-more-link" href="/hexo/hexo_build.html"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url-planning/" rel="tag">URL设置</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-optimization/" rel="tag">博客优化</a></li></ul>
 
     </footer>
   </div>

@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xingshu1990.github.io/other/raspberry_hexo.html</loc>
+    <loc>https://xingshu1990.github.io/python/py_image.html</loc>
+    
+    <lastmod>2021-01-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xingshu1990.github.io/python/pykeyword.html</loc>
     
     <lastmod>2021-01-15</lastmod>
     
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://xingshu1990.github.io/other/dingzhen.html</loc>
+    <loc>https://xingshu1990.github.io/other/raspberry_hexo.html</loc>
     
     <lastmod>2021-01-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xingshu1990.github.io/python/py_image.html</loc>
+    <loc>https://xingshu1990.github.io/other/dingzhen.html</loc>
     
     <lastmod>2021-01-15</lastmod>
     
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://xingshu1990.github.io/other/xinzhikoukuai.html</loc>
-    
-    <lastmod>2021-01-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xingshu1990.github.io/python/pykeyword.html</loc>
     
     <lastmod>2021-01-15</lastmod>
     
