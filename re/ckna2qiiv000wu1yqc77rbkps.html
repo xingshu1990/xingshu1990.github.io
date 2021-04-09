@@ -9,11 +9,11 @@
    
   <meta name="keywords" content="个人博客，SEO，行书" />
    
-  <meta name="description" content="环境模拟，如果老板给一个excel的关键词，让你做出带有文字的文字图，文字居中。没找到python能自动这样处理的代码。" />
+  <meta name="description" content="正则替换公式备忘录，记录一下工作中用的正则公式。" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    用python生成带有背景图的文字图 |  行书的部落格
+    正则替换公式备忘录 |  行书的部落格
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -48,7 +48,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-py_image"
+  id="post-valve_re"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -59,18 +59,18 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  用python生成带有背景图的文字图
+  正则替换公式备忘录
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/python/py_image.html" class="article-date">
-  <time datetime="2019-10-13T10:29:59.000Z" itemprop="datePublished">2019-10-13</time>
+      <a href="/re/ckna2qiiv000wu1yqc77rbkps.html" class="article-date">
+  <time datetime="2021-01-15T07:00:00.000Z" itemprop="datePublished">2021-01-15</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/re/">正则</a>
   </div>
   
 <div class="word_count">
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">978</span>
+            <span class="post-count">175</span>
         </span>
     </span>
 
@@ -87,34 +87,26 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote>
-<p>环境模拟，如果老板给一个excel的关键词，让你做出带有文字的文字图，文字居中。没找到python能自动这样处理的代码。<a id="more"></a><br>#####需要解决的问题</p>
+  <h2 id="场景重现"><a href="#场景重现" class="headerlink" title="场景重现"></a>场景重现</h2><blockquote>
 </blockquote>
-<ul>
-<li>来源关键词，数量比较大，网络上python生成图片的教程，都是单个关键词，生成单张图片的？</li>
-<li>图片如何保存 - 中文.jpg？</li>
-<li>文字能不能做到居中 ？</li>
-</ul>
-<blockquote>
-<p>一个python的大佬帮一个他的朋友折腾的东西，我这个只是大概模拟一下。<br>他要做的是，从数据库的某一个字段中，取出数据，然后用python生成带有背景图的，白底黑字图片。文字竖着，从右到左，文字居中。<br>我的这个伪代码，是生成带有背景图的文字图。</p>
-</blockquote>
-<blockquote>
-<p>同级目录下，存一张背景图，图片名字为1.jpg<br>另外还得去下载OpenCV的.whl文件，进行手动安装。<br>代码中有部分相同的代码，这个可以写成函数。<br>draw.text这一行，我这边因为考虑的是汉字所占的个数比例，直接算术计算，<br>实际还有字体大小，以及占位偏差，代码中没有上下居中，左右居中的方法。</p>
-</blockquote>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">同级目录下，存一张背景图，图片名字为1.jpg</span></span><br><span class="line"><span class="string">这个得去下载OpenCV的.whl文件，进行手动安装。</span></span><br><span class="line"><span class="string">代码中有部分相同的代码，这个可以写成函数。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">draw.text这一行，我这边因为考虑的是汉字所占的个数比例，直接算术计算，</span></span><br><span class="line"><span class="string">实际还有字体大小，以及占位偏差，代码中没有上下居中，左右居中的方法。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"</span><span class="string">""</span></span><br><span class="line">from PIL <span class="built_in">import</span> Image, ImageDraw, ImageFont</span><br><span class="line"><span class="built_in">import</span> cv2</span><br><span class="line"><span class="built_in">import</span> numpy as np</span><br><span class="line"></span><br><span class="line"><span class="comment">#考虑到会有很多关键词，所以多关键词，放列表里，如['甘孜','内蒙古']</span></span><br><span class="line"><span class="attr">i</span> = [<span class="string">"重生杀手的主角爱人"</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">k</span> = <span class="number">0</span></span><br><span class="line">for key <span class="keyword">in</span> i: </span><br><span class="line">    <span class="keyword">if</span> len(key)&gt;<span class="number">5</span> <span class="literal">and</span> len(key)&lt;<span class="number">11</span>:</span><br><span class="line">        <span class="attr">img</span> = cv2.imdecode(np.fromfile('<span class="number">1</span>.jpg',<span class="attr">dtype=np.uint8),-1)</span> <span class="comment"># 图片名称不能有汉字</span></span><br><span class="line">        <span class="attr">cv2img</span> = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) <span class="comment"># cv2和PIL中颜色的hex码的储存顺序不同</span></span><br><span class="line">        <span class="attr">pilimg</span> = Image.fromarray(cv2img)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># PIL图片上打印汉字</span></span><br><span class="line">        <span class="attr">draw</span> = ImageDraw.Draw(pilimg) <span class="comment"># 图片上打印</span></span><br><span class="line">        <span class="attr">font</span> = ImageFont.truetype(<span class="string">"simhei.ttf"</span>, <span class="number">60</span>, <span class="attr">encoding="utf-8")</span> <span class="comment"># 参数1：字体文件路径，参数2：字体大小</span></span><br><span class="line"></span><br><span class="line">        draw.text((int(img.shape[<span class="number">0</span>]/<span class="number">5</span>),int(img.shape[<span class="number">1</span>]/<span class="number">3</span>)), key, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="attr">font=font)</span> <span class="comment"># 参数1：打印坐标，参数2：文本，参数3：字体颜色，参数4：字体</span></span><br><span class="line">        <span class="attr">cv2charimg</span> = cv2.cvtColor(np.array(pilimg), cv2.COLOR_RGB2BGR)</span><br><span class="line">        <span class="comment"># cv2.imshow("图片", cv2charimg) # 汉字窗口标题显示乱码</span></span><br><span class="line">        cv2.imshow(<span class="string">"photo"</span>+str(k), cv2charimg)</span><br><span class="line">        cv2.imencode('.jpg',cv2charimg)[<span class="number">1</span>].tofile(key+<span class="string">".jpg"</span>)</span><br><span class="line">        cv2.waitKey (<span class="number">0</span>)</span><br><span class="line">        cv2.destroyAllWindows()</span><br><span class="line">        k+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    elif len(key)&lt;<span class="number">5</span> <span class="literal">and</span> len(key)&gt;<span class="number">3</span>:</span><br><span class="line">        <span class="attr">img</span> = cv2.imdecode(np.fromfile('<span class="number">1</span>.jpg',<span class="attr">dtype=np.uint8),cv2.IMREAD_UNCHANGED)</span> <span class="comment"># 名称不能有汉字</span></span><br><span class="line"></span><br><span class="line">        <span class="attr">cv2img</span> = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) <span class="comment"># cv2和PIL中颜色的hex码的储存顺序不同</span></span><br><span class="line">        <span class="attr">pilimg</span> = Image.fromarray(cv2img)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># PIL图片上打印汉字</span></span><br><span class="line">        <span class="attr">draw</span> = ImageDraw.Draw(pilimg) <span class="comment"># 图片上打印</span></span><br><span class="line">        <span class="attr">font</span> = ImageFont.truetype(<span class="string">"simhei.ttf"</span>, <span class="number">30</span>, <span class="attr">encoding="utf-8")</span> <span class="comment"># 参数1：字体文件路径，参数2：字体大小</span></span><br><span class="line">        draw.text((int(img.shape[<span class="number">0</span>]/<span class="number">2</span>+<span class="number">40</span>),int(img.shape[<span class="number">1</span>]/<span class="number">3</span>)), key, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="attr">font=font)</span></span><br><span class="line">        <span class="attr">cv2charimg</span> = cv2.cvtColor(np.array(pilimg), cv2.COLOR_RGB2BGR)</span><br><span class="line">        <span class="comment"># cv2.imshow("图片", cv2charimg) # 汉字窗口标题显示乱码</span></span><br><span class="line">        cv2.imshow(<span class="string">"photo"</span>+str(k), cv2charimg)</span><br><span class="line">        cv2.imencode('.jpg',cv2charimg)[<span class="number">1</span>].tofile(key+<span class="string">".jpg"</span>)</span><br><span class="line">        cv2.waitKey (<span class="number">0</span>)</span><br><span class="line">        cv2.destroyAllWindows()</span><br><span class="line">        k+=<span class="number">1</span></span><br><span class="line">    elif len(key)&lt;=<span class="number">3</span>:</span><br><span class="line">        <span class="attr">img</span> = cv2.imdecode(np.fromfile('<span class="number">1</span>.jpg',<span class="attr">dtype=np.uint8),cv2.IMREAD_UNCHANGED)</span> <span class="comment"># 名称不能有汉字</span></span><br><span class="line"></span><br><span class="line">        <span class="attr">cv2img</span> = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) <span class="comment"># cv2和PIL中颜色的hex码的储存顺序不同</span></span><br><span class="line">        <span class="attr">pilimg</span> = Image.fromarray(cv2img)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># PIL图片上打印汉字</span></span><br><span class="line">        <span class="attr">draw</span> = ImageDraw.Draw(pilimg) <span class="comment"># 图片上打印</span></span><br><span class="line">        <span class="attr">font</span> = ImageFont.truetype(<span class="string">"simhei.ttf"</span>, <span class="number">40</span>, <span class="attr">encoding="utf-8")</span> <span class="comment"># 参数1：字体文件路径，参数2：字体大小</span></span><br><span class="line">        draw.text((int(img.shape[<span class="number">0</span>]/<span class="number">1.8</span>+<span class="number">36</span>),int(img.shape[<span class="number">1</span>]/<span class="number">3</span>)), key, (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="attr">font=font)</span></span><br><span class="line">        <span class="attr">cv2charimg</span> = cv2.cvtColor(np.array(pilimg), cv2.COLOR_RGB2BGR)</span><br><span class="line">        <span class="comment"># cv2.imshow("图片", cv2charimg) # 汉字窗口标题显示乱码</span></span><br><span class="line">        cv2.imshow(<span class="string">"photo"</span>+str(k), cv2charimg)</span><br><span class="line">        cv2.imencode('.jpg',cv2charimg)[<span class="number">1</span>].tofile(key+<span class="string">".jpg"</span>)</span><br><span class="line">        cv2.waitKey (<span class="number">0</span>)</span><br><span class="line">        cv2.destroyAllWindows()</span><br><span class="line">        k+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>有以下几列数据，需要删除掉|后面的内容：<br>JA41W/P8-150(lb) 3”|A351 CF8<br>J23W/R3-16 DN15|A182 F316L<br>JA41H/13Cr-150(lb) 3”|A216 WCB<br>D342F/R3-150(lb) 8”|A351 CF3M<br>HA44W/P8-150(lb) 3”|A351 CF8<br>20ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>25ZA41WCL150d|F304\P8<em>F304</em>F304<em>F304</em>SM<em>304+SM</em>B8\8<br>80ZA40WCL150-1.0|CF8\P8<em>CF8</em>CF8<em>F304</em>SM<em>304+SM<br>20ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>25ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM<em>B8M\8M<br>40ZA41WCL150d|F316L\R3</em>F316L<em>F316L</em>F316L<em>SM</em>316L+SM*B8M\8M</p>
+<a id="more"></a>
+<h2 id="操作介绍"><a href="#操作介绍" class="headerlink" title="操作介绍"></a>操作介绍</h2><p>手动删除当然是可以，<br>只不过容易删除数据，<br>而且稍微有一点点浪费时间，<br>于是想到了正则表达式。<br><br>打开c.runoob.com/front-end/854网站，<br>将上面的原始数据，复制到网站里<br>打开正则表达式的百度百科，<br>\w \s \d \d+ [a-z]……<br><br>最后测试出来，正则公式为：[|][\w].*</p>
  
       <!-- reward -->
       
@@ -169,12 +161,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xingshu1990.github.io/python/py_image.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xingshu1990.github.io/re/ckna2qiiv000wu1yqc77rbkps.html" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/re/" rel="tag">正则</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/re/" rel="tag">正则表达式</a></li></ul>
 
     </footer>
   </div>
@@ -182,19 +174,19 @@
    
   <nav class="article-nav">
     
-      <a href="/other/tonglixin.html" class="article-nav-link">
+      <a href="/mysql/ckna2qi7d0000u1yqd6t8etx9.html" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            同理心爆棚，把我推向深渊
+            Mysql学习笔记
           
         </div>
       </a>
     
     
-      <a href="/python/pykeyword.html" class="article-nav-link">
+      <a href="/other/1.html" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">关键词规划师,用python获取流量关键词</div>
+        <div class="article-nav-title">SEO从业者眼中的丁真</div>
       </a>
     
   </nav>
