@@ -84,6 +84,99 @@
     
     
     <article
+  id="post-hexo_build"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/hexo/hexo_build.html"
+    >hexo博客搭建、优化备忘录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/hexo/hexo_build.html" class="article-date">
+  <time datetime="2020-02-29T15:36:22.000Z" itemprop="datePublished">2020-02-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  文章URL优化
+需求分析
+如果做过SEO优化工作，那么必然知道中文URL对搜索引擎不友好。
+通常将文章URL规划为这样：
+
+1
+
+
+{域名}/{类目或者分类}/文章.html
+
+
+于是我们需要这样操作：
+
+将类目或者分类英文化
+找到并编辑_config.yml中的# Category & Tag
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+# Category & Tag
+default_category: uncategorized
+#今后有新的分类和关键词都需要在这里一一规划好
+category_map:
+  爬虫: spider
+tag_map:
+  爬虫: spider
+
+
+设置文章URL
+ 
+      <a class="article-more-link" href="/hexo/hexo_build.html"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url-planning/" rel="tag">URL设置</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-optimization/" rel="tag">博客优化</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-tonglixin"
   class="article article-type-post"
   itemscope
