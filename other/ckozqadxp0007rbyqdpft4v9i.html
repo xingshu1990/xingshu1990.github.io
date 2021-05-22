@@ -9,11 +9,11 @@
    
   <meta name="keywords" content="个人博客，SEO，行书" />
    
-  <meta name="description" content="Python3 XP系统能安装的最后一个版本为Python3.4.4,以前在XP机子上安装过scrapy，还成功跑了python3的爬虫，不可能现在就安装不起来。这篇文章除了吐槽XP没人权以外，还是想介绍一下XP安装上scrapy（1.6.0）版本，继续跑。" />
+  <meta name="description" content="python学废了，其实是没有应用场景，所以网站内容转成牢骚、日志、SEO等内容。" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    32位xp系统 Python3.4.4安装scrapy1.6.0 |  行书的部落格
+    Sublime Text3通过SFTP远程连接树莓派 |  行书的部落格
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -48,7 +48,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-xp_scrapy"
+  id="post-raspberry_SFTP"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -59,18 +59,18 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  32位xp系统 Python3.4.4安装scrapy1.6.0
+  Sublime Text3通过SFTP远程连接树莓派
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/python/ckna2qik80012u1yqe7fx052y.html" class="article-date">
-  <time datetime="2020-03-13T13:29:59.000Z" itemprop="datePublished">2020-03-13</time>
+      <a href="/other/ckozqadxp0007rbyqdpft4v9i.html" class="article-date">
+  <time datetime="2020-06-20T08:34:42.000Z" itemprop="datePublished">2020-06-20</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/other/">其他</a>
   </div>
   
 <div class="word_count">
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">410</span>
+            <span class="post-count">627</span>
         </span>
     </span>
 
@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -102,17 +102,35 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="32XP系统没人权！！！！"><a href="#32XP系统没人权！！！！" class="headerlink" title="32XP系统没人权！！！！"></a>32XP系统没人权！！！！</h2><p>Python3 XP系统能安装的最后一个版本为<strong>Python3.4.4</strong><br>以前在XP机子上安装过scrapy，还成功跑了python3的爬虫，不可能现在就安装不起来</p>
+  <h3 id="需求重现"><a href="#需求重现" class="headerlink" title="需求重现"></a>需求重现</h3><p>电脑系统是XP，或者有部分人的系统安装的是阉割版的系统，不能安装一些系统，<br>或者一些主板稀奇古怪的原因，导致不能安装W7及以上的系统，另外部分Python库只有linux下能安装运行。</p>
 <a id="more"></a>
-<p>于是不管怎么样，打开命令行工具，输入<strong>pip install scrapy</strong><br>按照以往惯例，会有几次报错：比如C++ 10 C++14之类的ERROR<br>直接打开<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a><br>搜索相关<strong>第三方库</strong>的安装包<br>居然大多数第三方库<strong>没有cp34</strong>！！！</p>
-<h2 id="32XP系统没人权！！！！-1"><a href="#32XP系统没人权！！！！-1" class="headerlink" title="32XP系统没人权！！！！"></a>32XP系统没人权！！！！</h2><p>把系统中的python全部删除，下载了Anaconda3-2.3.0-Windows-x86.exe（Python3.4.3）</p>
-<p>其实完全可以不用安装Anaconda3，我这里只是为了方便<br>进到Anaconda组件中，打开【Anaconda Command Prompt】<br>pip install scrapy==1.6.0，pip 下载源更改 需自行百度</p>
-<p><strong>pyOpenSSL cryptography OpenSSL</strong>报错的多数是这三个<br>去官方下载源码，<strong>安装源码、降版本、安装</strong>最新版本都试过<br>然而都没用。</p>
-<p>后来发现了这个<a href="https://blog.csdn.net/qq_39944630/article/details/80714580，" target="_blank" rel="noopener">https://blog.csdn.net/qq_39944630/article/details/80714580，</a><br>于是按照里面的这个，去搜索了Twisted 32位<br>下面百度盘包含：<br>Twisted-18.7.0-cp34-cp34m-win32.whl<br>安装这个-Twisted-18.7.0-cp34-none-win32.whl<br>链接: <a href="https://pan.baidu.com/s/1z5jxrzxSVKo4Am_pFX2CNQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1z5jxrzxSVKo4Am_pFX2CNQ</a> 提取码: 2zdj</p>
-<p>下载Twisted-18.7.0-cp34-none-win32.whl CD到下载目录→pip install Twisted-18.7.0-cp34-none-win32.whl→安装完毕后，再执行pip install scrapy。</p>
-<p>如果不出意外的话，scrapy能安装了，但是执行scrapy项目的时候，还报错win32啥信息，<br>二话不说执行pip install pywin32<br>然后该干啥干啥</p>
-<p>本文内容借鉴：<br><a href="https://blog.csdn.net/qq_39944630/article/details/80714580" target="_blank" rel="noopener">python3.4安装scrapy的各种坑</a></p>
- 
+<p>于是就有了——安装Sublime Text3，通过SFTP远程连接树莓派，进行远程编辑代码的想法。</p>
+<p>问题1：通过Xshell连接树莓派固定IP，使用nano、vim编辑py文件，他不想么？<br>答：对于我来说，确实不香。主要原因是nano的复制粘贴不方便，也没有代码补全，vim需要一定的学习成本，还不如直接一点，用安装好插件的sublime text3，编辑py代码，更改sftp的sftp-config.json文件，自动保存上传，然后再切换到xshell 进行远程调试。</p>
+<p>问题2：为什么不用vscode、pychram远程连接？<br>答:vscode确实很好用，但是XP安装不起来（没办法，非程序员，只是传统行业中的销售人员，偶尔摸鱼看点Python编程）。pycharm对于系统配置要求比较高，安装旧版本的pycharm，也是比较卡，于是就优先考虑pycharm。</p>
+<h3 id="实行问题"><a href="#实行问题" class="headerlink" title="实行问题"></a>实行问题</h3><p>我买的树莓派是3B+，通过下载<a href="https://packagecontrol.io/installation#st3" target="_blank" rel="noopener">https://packagecontrol.io/installation#st3</a> 中的Package Control文件，安装或解压后使用，这个网络上文章比较多，今天就暂时不写了，以后可能补充。</p>
+<p>安装好，并通过Package Control安装了SFTP以后，在本地新建一个文件夹，用来保存和上传文件使用。<br>通过sublime text3打开文件夹，sublime text3默认有一个侧边栏，点开上面新建的文件夹，右键点击sftp/ftp 会有一个Map to Remote ，sftp会默认在当前目录下新建：sftp-config.json这个文件。</p>
+<pre><code>&quot;type&quot;: &quot;sftp&quot;,  //SSH连接选sftp
+//下面这些配置参考网络上的文章
+
+&quot;save_before_upload&quot;: true,
+&quot;upload_on_save&quot;: true,
+&quot;sync_down_on_open&quot;: false,
+&quot;sync_skip_deletes&quot;: false,
+&quot;sync_same_age&quot;: true,
+&quot;confirm_downloads&quot;: false,
+&quot;confirm_sync&quot;: true,
+&quot;confirm_overwrite_newer&quot;: false,
+
+&quot;host&quot;: &quot;192.168.1.*&quot;,  //树莓派wifi IP或者有线IP
+&quot;user&quot;: &quot;pi&quot;,           //默认账户是pi
+&quot;password&quot;: &quot;*&quot;,        //密码  
+&quot;port&quot;: &quot;22&quot;,           //端口不改
+
+&quot;remote_path&quot;: &quot;/home/pi&quot;,   //这个是重点，使用的是xshell连接到树莓派以后 树莓派提供的目录。
+//我原先设定这个目录为/opt/自建子目录/ 结果死也连接不上。
+
+
+未完待续……</code></pre> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -166,12 +184,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xingshu1990.github.io/python/ckna2qik80012u1yqe7fx052y.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xingshu1990.github.io/other/ckozqadxp0007rbyqdpft4v9i.html" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SFTP/" rel="tag">SFTP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sublime-Text3/" rel="tag">Sublime Text3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag">树莓派</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" rel="tag">远程连接</a></li></ul>
 
     </footer>
   </div>
@@ -179,19 +197,19 @@
    
   <nav class="article-nav">
     
-      <a href="/scrapy/ckna2qif6000ku1yq3n6oenem.html" class="article-nav-link">
+      <a href="/other/ckozqadyt000brbyq6g30gz9i.html" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            URL中数字类型错误，导致url中的数字不能递增
+            树莓派安装hexo 将树莓派当成移动博客编辑器
           
         </div>
       </a>
     
     
-      <a href="/hexo/ckna2qias0006u1yqfud56zjp.html" class="article-nav-link">
+      <a href="/other/ckozqadzb000crbyqemsx5ikv.html" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">hexo博客搭建、优化备忘录</div>
+        <div class="article-nav-title">树莓派安装v2</div>
       </a>
     
   </nav>

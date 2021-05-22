@@ -9,11 +9,11 @@
    
   <meta name="keywords" content="个人博客，SEO，行书" />
    
-  <meta name="description" content="scrapy中，有需要对URL进行组合，比如URL中有关于页数，比如展示内容数量，我这个基础不扎实的家伙，实际碰到Python的数据类型，也会翻车。" />
+  <meta name="description" content="很佩服那些说死就死的人，不是那种一边说着“好想去死”，一边又不敢行动。" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    URL中数字类型错误，导致url中的数字不能递增 |  行书的部落格
+    很佩服那些说死就死的人 |  行书的部落格
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -48,7 +48,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-scrapy_type"
+  id="post-shuosijiusi"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -59,18 +59,18 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  URL中数字类型错误，导致url中的数字不能递增
+  很佩服那些说死就死的人
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/scrapy/ckna2qif6000ku1yq3n6oenem.html" class="article-date">
-  <time datetime="2020-03-20T13:22:10.000Z" itemprop="datePublished">2020-03-20</time>
+      <a href="/other/ckozqae0d000hrbyq80b41gnm.html" class="article-date">
+  <time datetime="2020-08-20T06:09:31.000Z" itemprop="datePublished">2020-08-20</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/scrapy/">scrapy</a>
+    <a class="article-category-link" href="/categories/other/">其他</a>
   </div>
   
 <div class="word_count">
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">288</span>
+            <span class="post-count">339</span>
         </span>
     </span>
 
@@ -94,20 +94,20 @@
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="问题情况"><a href="#问题情况" class="headerlink" title="问题情况"></a>问题情况</h3><p>scrapy中，有需要对URL进行组合，比如URL中有关于页数，比如展示内容数量，我这个基础不扎实的家伙，实际碰到Python的数据类型，也会翻车。<br>额，群里一好友在上个星期的时候，问我：【为什么我写的scapy代码，不能翻页了】<br>然后丢给我压缩包。<br>然后……</p>
+  <p>很佩服那些说死就死的人，不是那种一边说着“好想去死”，一边又不敢行动。<br>自卑到骨子里，几乎所有时间都处在低落的情绪，对几乎所有活动丧失兴趣。<br>经常感到自己毫无价值，也有想过，能直接无痛的死亡，不是一件很好的事情？</p>
 <a id="more"></a>
-<p>咕咕咕，我鸽了好几天。咕<del>~</del></p>
-<h3 id="实际代码"><a href="#实际代码" class="headerlink" title="实际代码"></a>实际代码</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class WorldSpider(scrapy.Spider):</span><br><span class="line">    name = <span class="string">"world"</span></span><br><span class="line">    allowed_domains = [<span class="string">"j****.com"</span>]</span><br><span class="line">    base = <span class="string">'http://www.****/xinwen/****'</span></span><br><span class="line">    <span class="builtin-name">set</span> = <span class="string">"1"</span></span><br><span class="line">    end_url = <span class="string">'.html'</span></span><br><span class="line">    start_urls = [base + str(set) + end_url]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">···中间省略十几行代码。。。。嗯大概···</span><br><span class="line"></span><br><span class="line">        #问过他本人，他考虑的是人工组合一下url</span><br><span class="line">        <span class="keyword">if</span> self.<span class="builtin-name">set</span> &lt; 15:</span><br><span class="line">            self.<span class="builtin-name">set</span> += 1</span><br><span class="line">            url = self.base + str(self.set) + self.end_url</span><br><span class="line">            </span><br><span class="line">            <span class="builtin-name">print</span> self.set</span><br><span class="line">            yield scrapy.Request(url, <span class="attribute">callback</span>=self.parse)</span><br></pre></td></tr></table></figure>
-
-<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>原始代码的部分截取，<br>代码中的set = “1”，<br>下面有需求，<br>需要组合成<strong><a href="http://www.dsdfsdf.cm/｛set｝.html" target="_blank" rel="noopener">http://www.dsdfsdf.cm/｛set｝.html</a></strong><br>数字自增，要<strong>int类型</strong>，<br>二话不说，直接改成<strong>set = 1</strong><br>运行一下代码，<br>编辑器报了一些错误：<br>具体是url这块的类型有问题，但是又没有严重影响url<br>不考虑严谨性，就这样了。</p>
+<p><img src="https://i.loli.net/2020/12/11/6UdrPCTOsgS7QqG.jpg" alt="自卑"></p>
+<p>——真不是网抑云时间</p>
+<p>好像是从小学三年级得大病住院起，人就特别负面，经常性的想到各种死。</p>
+<p>高中学当时虽然看的多的是小说，但是郭敬明的“大逆行事”，对我影响特别深。<br>特别是“悲伤逆流成河”中，肮脏、带有恶臭的小巷，八卦的家庭主妇，还有父母日常的打骂，小孩子玩耍的欢笑声，都感染着我。<br>高一的时候，同班同学多数都叛逆，有打架，抽烟，打牌；自己也经常跑去黑网吧；因此多多少少也接触到校园暴力。<br>所以也能感同身受。</p>
+<p>然后别人买素描本，自己也买了一本，不过画的不是苹果的素描，而是割腕的素描，人还有点“变态”似的，拿给别人看。<br>现在想来，可能当时的自己，只是想要别人一句“你有什么不开心的事情么？”</p>
+<p><img src="https://i.loli.net/2020/12/11/gPtETDa74OZUn8m.jpg" alt="素描"></p>
  
       <!-- reward -->
       
@@ -162,32 +162,30 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xingshu1990.github.io/scrapy/ckna2qif6000ku1yq3n6oenem.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xingshu1990.github.io/other/ckozqae0d000hrbyq80b41gnm.html" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/other/ckna2qiem000ju1yqehi2ake0.html" class="article-nav-link">
+      <a href="/other/ckozqae25000trbyq3g7b5y0e.html" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            树莓派安装v2
+            那个心直口快的人
           
         </div>
       </a>
     
     
-      <a href="/python/ckna2qik80012u1yqe7fx052y.html" class="article-nav-link">
+      <a href="/other/ckozqadyt000brbyq6g30gz9i.html" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">32位xp系统 Python3.4.4安装scrapy1.6.0</div>
+        <div class="article-nav-title">树莓派安装hexo 将树莓派当成移动博客编辑器</div>
       </a>
     
   </nav>
