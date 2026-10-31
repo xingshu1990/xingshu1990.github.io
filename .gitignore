@@ -1,0 +1,9 @@
+# Hugo 生成的输出目录
+public/
+
+# Hugo 资源缓存
+resources/
+
+# 系统文件
+.DS_Store
+Thumbs.db
