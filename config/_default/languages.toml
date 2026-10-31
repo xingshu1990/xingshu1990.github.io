@@ -1,0 +1,7 @@
+[zh]
+    label  = "简体中文"
+    title  = "Hugo 主题 Stack"
+    weight = 2
+
+    [zh.params.sidebar]
+        subtitle = "为博客设计的卡片式 Hugo 主题"
