@@ -1,5 +1,6 @@
 mainSections   = ["post"]
 rssFullContent = true
+#浏览器标签小图标
 favicon        = "img/avatar.png"
 
 [footer]
@@ -8,6 +9,7 @@ favicon        = "img/avatar.png"
 [sidebar]
     emoji    = "✏️"
     subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+	#侧边栏头像
     avatar   = "img/avatar.png"
 
 [article]

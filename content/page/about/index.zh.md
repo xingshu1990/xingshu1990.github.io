@@ -13,11 +13,9 @@ menu:
 
 ## 关于作者
 
-你好！我是一个热衷于博客和开源的爱好者。我喜欢探索新技术并向社区分享我的经验。
+你好！本人非程序员，平时爱好捣鼓简单的一些程序。
 
-### 我的旅程
 
-我在 10 多年前开始了我的 Web 开发之旅。自那以后，我参与了许多项目，从个人博客到大规模企业应用。
 
 
 
@@ -25,8 +23,7 @@ menu:
 
 如果你有任何问题或只是想打个招呼，请随时联系我！
 
-- **电子邮件**: [hello@example.com](mailto:hello@example.com)
-- **Twitter**: [@example](https://twitter.com/example)
-- **GitHub**: [example](https://github.com/example)
+- **电子邮件**: [xingshu330324@gmail.com](xingshu330324@gmail.com)
+- **GitHub**: [xingshu1990](https://github.com/xingshu1990)
 
 

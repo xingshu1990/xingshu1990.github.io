@@ -1,7 +1,7 @@
 [zh]
     label  = "简体中文"
-    title  = "Hugo 主题 Stack"
+    title  = "行书的个人博客"
     weight = 2
 
     [zh.params.sidebar]
-        subtitle = "为博客设计的卡片式 Hugo 主题"
+        subtitle = "此为xingshu 行书的个人博客"
