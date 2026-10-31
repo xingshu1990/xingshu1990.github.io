@@ -1,4 +1,4 @@
-baseURL                = "/"
+baseURL                = "https://xingshu1990.github.io/"
 locale                 = "zh"
 title                  = "Hugo Theme Stack"
 # Theme i18n support
