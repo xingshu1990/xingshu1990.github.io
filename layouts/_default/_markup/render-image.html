@@ -1,0 +1,8 @@
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if $image }}
+  {{ $webp := $image.Process "webp q75" }}
+  <img src="{{ $webp.RelPermalink }}" width="{{ $webp.Width }}" height="{{ $webp.Height }}" alt="{{ .Text }}" loading="lazy">
+{{ else }}
+  <!-- 如果找不到资源，回退到原始 Markdown 图片输出 -->
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">
+{{ end }}
