@@ -9,3 +9,5 @@ resources/
 Thumbs.db
 
 hugo.exe
+
+.hugo_build.lock
