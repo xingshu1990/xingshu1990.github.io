@@ -17,5 +17,6 @@ theme = 'hugo-theme-stack'
     post = "/p/:slug/"
     page = "/:slug/"
 
-
+[outputs]
+  home = ["html", "rss", "json"]
 

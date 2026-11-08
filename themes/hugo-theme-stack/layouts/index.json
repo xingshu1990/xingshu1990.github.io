@@ -1,0 +1,8 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- $section := $.Site.GetPage "section" .Section }}
+{{- range .Site.AllPages -}}
+{{- if and (ne .Type "page") (eq .Kind "page") -}}
+{{- $.Scratch.Add "index" (dict "id" .File.UniqueID "type" .Params.Categories "content" (print (substr (.Summary | plainify) 0 20) "...") "summary" (.Summary | plainify)  "hierarchy_lvl0" (index .Params.Categories 0) "hierarchy_lvl1" .Title "hierarchy_lvl2" "" "hierarchy_lvl3" "" "url" .Permalink "tags" .Params.Tags ) }}
+{{- end -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

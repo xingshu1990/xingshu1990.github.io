@@ -16,3 +16,5 @@
     {{- $customScript := . | js.Build $opts | fingerprint -}}
     <script type="text/javascript" src="{{ $customScript.RelPermalink }}" defer></script>
 {{- end -}}
+
+
