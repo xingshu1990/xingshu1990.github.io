@@ -52,7 +52,16 @@ theme = 'hugo-theme-stack'
     dir = ":cacheDir/images"
     maxAge = -1
 	
-
+# 谷歌统计
 [services]
   [services.googleAnalytics]
     ID = 'G-M3QJJ7KG7M'
+	
+# 网站地图 sitemap
+[sitemap]
+  changeFreq = ''
+  filename = 'sitemap.xml'
+  priority = -1
+  
+# Robots
+enableRobotsTXT = true

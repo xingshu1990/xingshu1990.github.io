@@ -1,0 +1,10 @@
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Block tag and category pages to prevent duplicate content
+Disallow: /tags/
+Disallow: /categories/
+
+# Tell search engines where the sitemap is located
+Sitemap: https://xingshu1990.github.io/sitemap.xml
