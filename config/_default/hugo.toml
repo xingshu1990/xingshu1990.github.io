@@ -20,3 +20,34 @@ theme = 'hugo-theme-stack'
 [outputs]
   home = ["html", "rss", "json"]
 
+# https://huuuuuuo.github.io/post/hugo%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/
+# 图片放大效果
+
+# Fancybox 图片点击放大
+[params]
+  fancybox = true
+
+# Hugo 图片处理
+[imaging]
+  # 高质量缩放算法
+  resampleFilter = "lanczos"
+
+  # WebP 压缩
+  [imaging.webp]
+    compression = "lossy"
+    quality = 75
+    method = 5
+    hint = "photo"
+
+  # AVIF 压缩
+  [imaging.avif]
+    compression = "lossy"
+    quality = 60
+    encoderSpeed = 8
+    hint = "photo"
+
+# 图片处理缓存
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+    maxAge = -1

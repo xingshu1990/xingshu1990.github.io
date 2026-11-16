@@ -1,0 +1,32 @@
+
+{{- $src := .Destination -}}
+{{- $width := "" -}}
+{{- $height := "" -}}
+
+{{- $image := .Page.Resources.GetMatch .Destination -}}
+{{- if $image -}}
+  {{- $webp := $image.Process "webp q75" -}}
+  {{- $src = $webp.RelPermalink -}}
+  {{- $width = $webp.Width -}}
+  {{- $height = $webp.Height -}}
+{{- end -}}
+
+{{- if .Page.Site.Params.fancybox -}}
+<div class="post-img-view">
+  <a data-fancybox="gallery" href="{{ $src | safeURL }}">
+    <img src="{{ $src | safeURL }}"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}
+         alt="{{ .Text }}"
+         {{ with .Title }}title="{{ . }}"{{ end }}
+         loading="lazy">
+  </a>
+</div>
+{{- else -}}
+<img src="{{ $src | safeURL }}"
+     {{ with $width }}width="{{ . }}"{{ end }}
+     {{ with $height }}height="{{ . }}"{{ end }}
+     alt="{{ .Text }}"
+     {{ with .Title }}title="{{ . }}"{{ end }}
+     loading="lazy">
+{{- end -}}
