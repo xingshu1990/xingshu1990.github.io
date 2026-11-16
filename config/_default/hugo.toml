@@ -51,3 +51,8 @@ theme = 'hugo-theme-stack'
   [caches.images]
     dir = ":cacheDir/images"
     maxAge = -1
+	
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-GG2PFR7X5L'
