@@ -1,6 +1,8 @@
 baseURL                = "https://xingshu1990.github.io/"
 locale                 = "zh"
 title                  = "Hugo Theme Stack"
+# Robots
+enableRobotsTXT = true
 # Theme i18n support
 # See i18n folder for available languages
 defaultContentLanguage = "zh"
@@ -62,6 +64,4 @@ theme = 'hugo-theme-stack'
   changeFreq = ''
   filename = 'sitemap.xml'
   priority = -1
-  
-# Robots
-enableRobotsTXT = true
+ 
