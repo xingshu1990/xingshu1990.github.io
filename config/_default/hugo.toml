@@ -65,3 +65,8 @@ theme = 'hugo-theme-stack'
   filename = 'sitemap.xml'
   priority = -1
  
+ 
+[[menu.main]]
+  name = "日期计算器"
+  url = "/date-calculation.html"  # 注意拼写必须和文件名一模一样
+  weight = 10
