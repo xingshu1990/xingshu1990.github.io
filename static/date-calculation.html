@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>日期计算器 - 日期相差天数、日期推算与工作日计算</title>
+    <meta name="description" content="免费在线日期计算器，支持计算两个日期之间相差多少天、星期和月份，推算指定日期几天前或几天后的日期。">
+    <meta name="keywords" content="日期计算器,日期计算,日期推算,日期相差天数,日期间隔计算,多少天后,多少天前">
+
+    <link rel="canonical" href="date-calculation.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="日期计算器 - 日期相差天数、日期推算与工作日计算">
+    <meta property="og:description" content="在线计算两个日期之间相差多少天，推算指定日期几天前或几天后的日期。">
+    <meta property="og:url" content="date-calculation.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "在线日期计算器",
+        "url": "date-calculation.html",
+        "description": "在线计算两个日期之间的天数差，推算指定日期之前或之后的日期。",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All"
+    }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f6f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #1769aa;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 24px 40px;
+            background: #fff;
+            min-height: 100vh;
+        }
+
+        .breadcrumb {
+            margin-bottom: 24px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 12px 0 24px;
+            text-align: center;
+            font-size: 26px;
+            line-height: 1.5;
+            color: #222;
+        }
+
+        h2 {
+            margin: 28px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 19px;
+            color: #333;
+        }
+
+        h3 {
+            margin: 18px 0 8px;
+            font-size: 16px;
+        }
+
+        .calculator {
+            margin: 18px 0 30px;
+            padding: 20px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            cursor: default;
+        }
+
+        td {
+            padding: 8px 4px;
+            vertical-align: middle;
+        }
+
+        input,
+        select {
+            height: 40px;
+            padding: 4px 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        input[type="number"] {
+            width: 85px;
+        }
+
+        input[type="button"] {
+            min-width: 85px;
+            padding: 4px 16px;
+            border: 0;
+            background: #1677c8;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background: #105fa3;
+        }
+
+        .y {
+            width: 100px;
+        }
+
+        .d {
+            width: 65px;
+        }
+
+        .res {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #d35400;
+        }
+
+        .result-row {
+            margin-top: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .description {
+            margin-top: 30px;
+            padding: 18px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .description p {
+            margin: 8px 0;
+        }
+
+        .holiday-box {
+            margin-top: 12px;
+            padding: 12px;
+            border: 1px solid #99cc33;
+            border-radius: 5px;
+            background: #fbfff5;
+        }
+
+        .more-links {
+            margin-top: 28px;
+            padding: 18px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .more-links ul {
+            margin: 8px 0;
+            padding-left: 22px;
+        }
+
+        .more-links li {
+            margin: 6px 0;
+        }
+
+        .faq {
+            margin-top: 28px;
+        }
+
+        .faq-item {
+            margin: 14px 0;
+        }
+
+        .faq-item p {
+            margin: 5px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 14px 12px 30px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .calculator {
+                padding: 12px 8px;
+            }
+
+            input,
+            select {
+                max-width: 100%;
+                font-size: 15px;
+            }
+
+            input[type="number"] {
+                width: 72px;
+            }
+
+            .y {
+                width: 82px;
+            }
+
+            .d {
+                width: 58px;
+            }
+
+            td {
+                padding: 6px 2px;
+            }
+
+            .res {
+                display: block;
+                margin: 8px 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+
+    <nav class="breadcrumb">
+        <a href="/" target="_top">返回首页</a>
+        <span> - </span>
+        <span>日期计算器</span>
+    </nav>
+
+    <h1>在线日期计算器</h1>
+
+    <p>
+        日期计算器可以帮助你快速计算两个日期之间相差多少天，
+        也可以推算指定日期若干天、星期或月份之前和之后的日期。
+    </p>
+
+    <script type="text/javascript" src="net1.js"></script>
+
+    <section class="calculator">
+        <h2>一、计算两个日期之间相差多少天</h2>
+
+        <table>
+            <tr>
+                <td>
+                    <input type="number" class="y" id="SY2">年
+                    <input type="number" class="d" id="SM2">月
+                    <input type="number" class="d" id="SD2">日
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    距
+                    <input type="number" class="y" id="SY3">年
+                    <input type="number" class="d" id="SM3">月
+                    <input type="number" class="d" id="SD3">日
+                </td>
+            </tr>
+
+            <tr>
+                <td class="result-row">
+                    <input type="button" value="相 差" onclick="daydiff()">
+                    <span class="res" id="result2"></span>
+                </td>
+            </tr>
+        </table>
+
+        <p>输入两个阳历日期，点击“相差”即可计算日期之间的天数、星期和月份差。</p>
+    </section>
+
+    <section class="calculator">
+        <h2>二、推算几天前或几天后的日期</h2>
+
+        <table>
+            <tr>
+                <td>
+                    <input type="number" class="y" id="SY" name="SY">年
+                    <input type="number" class="d" id="SM" name="SM">月
+                    <input type="number" class="d" id="SD" name="SD">日
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="pom">
+                        <option value="1">往后</option>
+                        <option value="-1">往前</option>
+                    </select>
+
+                    <input type="number" class="y" id="dnum">
+
+                    <select id="dtype" onchange="typesel(this)">
+                        <option value="1">日</option>
+                        <option value="4">工作日</option>
+                        <option value="2">星期</option>
+                        <option value="3">月</option>
+                    </select>
+
+                    <span id="hint"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="result-row">
+                    <input type="button" value="计 算" onclick="dayadd()">
+                    <span id="hint0"></span>
+                    <span class="res" id="result1"></span>
+                    <span class="res" id="nongli"></span>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            选择起始日期、推算方向和时间单位，输入数量后点击计算，
+            即可得到对应日期及农历日期。
+        </p>
+    </section>
+
+    <script>
+        var _wyear = 2027;
+
+        var wlist = [
+            [31],
+            [14],
+            [],
+            [],
+            [8],
+            [],
+            [],
+            [],
+            [26],
+            [9],
+            [],
+            []
+        ];
+
+        var hlist = [
+            [1,2,3],
+            [5,6,7,8,9,10,11,12,13],
+            [],
+            [3,4,5],
+            [1,2,3,4,5],
+            [9],
+            [],
+            [],
+            [15],
+            [1,2,3,4,5,6,7],
+            [],
+            []
+        ];
+    </script>
+
+    <script type="text/javascript" src="main1.9.js"></script>
+
+    <section class="description">
+        <h2>日期计算说明</h2>
+
+        <p>
+            <strong>1. 日期间隔计算：</strong>
+            计算两个阳历日期之间相差的天数、星期和月份。
+            如果第一个日期晚于第二个日期，计算结果为负数。
+        </p>
+
+        <p>
+            <strong>2. 日期推算：</strong>
+            计算指定日期往后或往前若干天、若干星期或若干月后的日期，
+            并显示对应的农历日期。
+        </p>
+
+        <p>
+            <strong>3. 工作日计算：</strong>
+            根据工作日、周末及节假日安排推算日期。
+            工作日计算结果受页面节假日数据范围影响。
+        </p>
+
+        <p>
+            <strong>4. 日期输入：</strong>
+            输入日期均为阳历，最早有效日期为1901年1月1日。
+            月份或日期超出正常范围时，系统会自动调整。
+            例如输入11月32日，将自动调整为12月2日。
+        </p>
+
+
+    </section>
+
+    <section class="faq">
+        <h2>日期计算常见问题</h2>
+
+        <div class="faq-item">
+            <h3>两个日期之间相差多少天怎么计算？</h3>
+            <p>
+                在日期间隔计算区域分别输入开始日期和结束日期，
+                点击“相差”按钮即可得到两个日期之间的天数。
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>100天后是几月几号？</h3>
+            <p>
+                在日期推算区域输入起始日期，选择“往后”和“日”，
+                输入100后点击计算，即可查询100天后的具体日期。
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>如何计算某个日期之前的日期？</h3>
+            <p>
+                选择“往前”，输入需要推算的天数、星期或月份，
+                点击计算即可得到对应日期。
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>日期计算器可以计算工作日吗？</h3>
+            <p>
+                可以。选择“工作日”后输入数量，
+                系统会根据页面内的工作日和节假日数据进行日期推算。
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>日期计算器支持农历查询吗？</h3>
+            <p>
+                日期推算完成后，页面会显示对应的农历日期信息。
+            </p>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        
+    </footer>
+
+</div>
+</body>
+</html>
