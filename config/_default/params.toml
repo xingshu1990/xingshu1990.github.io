@@ -12,10 +12,10 @@ favicon        = "img/avatar.png"
 	#侧边栏头像
     avatar   = "img/avatar.png"
 
-[article]
-    [article.license]
-        enabled = true
-        default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+#[article]
+    #[article.license]
+       # enabled = false
+       # default = ""
 
 [widgets]
     homepage = [
