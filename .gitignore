@@ -11,3 +11,6 @@ Thumbs.db
 hugo.exe
 
 .hugo_build.lock
+/1.ps1
+/go.mod
+/go.sum
