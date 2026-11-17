@@ -70,3 +70,5 @@ theme = 'hugo-theme-stack'
   name = "日期计算器"
   url = "/date-calculation.html"  # 注意拼写必须和文件名一模一样
   weight = 10
+  [menu.main.params]
+    icon = "date"
