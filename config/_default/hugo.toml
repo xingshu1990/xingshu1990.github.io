@@ -72,3 +72,13 @@ theme = 'hugo-theme-stack'
   weight = 10
   [menu.main.params]
     icon = "date"
+	
+	
+[params.comments]
+  enabled = true
+  provider = "utterances"
+
+  [params.comments.utterances]
+    repo = "xingshu1990/xingshu1990.github.io"
+    issueTerm = "pathname"
+    label = "comment"
