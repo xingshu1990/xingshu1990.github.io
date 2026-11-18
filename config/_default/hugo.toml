@@ -73,7 +73,6 @@ theme = 'hugo-theme-stack'
   [menu.main.params]
     icon = "date"
 	
-	
 [params.comments]
   enabled = true
   provider = "utterances"
@@ -82,3 +81,5 @@ theme = 'hugo-theme-stack'
     repo = "xingshu1990/xingshu1990.github.io"
     issueTerm = "pathname"
     label = "comment"
+    lightTheme = "github-light"
+    darkTheme = "github-dark"
