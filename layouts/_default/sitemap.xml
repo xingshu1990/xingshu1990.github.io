@@ -1,0 +1,49 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  {{ range .Pages }}
+    {{- /* 过滤逻辑：排除标签、分类，以及特定的列表/工具页面 */ -}}
+    {{- if not (or 
+          (strings.Contains .RelPermalink "/tags/") 
+          (strings.Contains .RelPermalink "/categories/")
+          (eq .RelPermalink "/post/")
+          (eq .RelPermalink "/page/")
+          (eq .RelPermalink "/archives/")
+          (eq .RelPermalink "/search/")
+          (eq .RelPermalink "/links/")
+    ) }}
+      
+      {{- /* 排除在 Front Matter 中设置了 sitemap.disable: true 的页面 */ -}}
+      {{- if not .Sitemap.Disable }}
+        {{- if .Permalink -}}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
+    {{- end }}
+    {{- with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{- end }}
+    {{- if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>
+    {{- end }}
+    {{- if .IsTranslated }}{{ range .Translations }}
+    <xhtml:link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
+    {{- end }}{{ end }}
+  </url>
+        {{- end -}}
+      {{- end -}}
+      
+    {{- end -}}
+  {{ end }}
+
+  <!-- 手动添加静态 HTML 页面（放在循环外面，避免重复） -->
+  <url>
+    <loc>{{ "date-calculation.html" | absURL }}</loc>
+    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
