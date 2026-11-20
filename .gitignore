@@ -1,16 +1,24 @@
+
 # Hugo 生成的输出目录
-public/
+/public/
 
 # Hugo 资源缓存
-resources/
+/resources/
+
+# Hugo 构建锁
+.hugo_build.lock
 
 # 系统文件
 .DS_Store
 Thumbs.db
+desktop.ini
 
+# Hugo 程序
 hugo.exe
 
-.hugo_build.lock
-/1.ps1
+# Go 模块文件（按当前项目需求忽略）
 /go.mod
 /go.sum
+
+# 本地脚本
+/1.ps1
