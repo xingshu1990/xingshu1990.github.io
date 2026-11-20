@@ -5,6 +5,8 @@ Allow: /
 # Block tag and category pages to prevent duplicate content
 Disallow: /tags/
 Disallow: /categories/
-
+Disallow: /archives/
+Disallow: /search/
+Disallow: /链接/
 # Tell search engines where the sitemap is located
 Sitemap: https://xingshu1990.github.io/sitemap.xml
